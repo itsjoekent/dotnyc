@@ -2,6 +2,7 @@ const theme = {
   maxWidth: '800px',
   colors: {
     cloud: '#FFFFFF',
+    rainCloud: '#AAAAAA',
     pen: '#111111',
   },
   fonts: {

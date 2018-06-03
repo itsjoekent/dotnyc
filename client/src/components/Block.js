@@ -24,6 +24,12 @@ const Block = styled.div`
   ${props => props.baseMarginBottom ? `margin-bottom: 1em` : ''}
   ${props => props.baseMarginLeft ? `margin-left: 1em` : ''}
   ${props => props.baseMarginRight ? `margin-right: 1em` : ''}
+
+  ${props => props.doubleMargin ? `margin: 4em` : ''}
+  ${props => props.doubleMarginTop ? `margin-top: 4em` : ''}
+  ${props => props.doubleMarginBottom ? `margin-bottom: 4em` : ''}
+  ${props => props.doubleMarginLeft ? `margin-left: 4em` : ''}
+  ${props => props.doubleMarginRight ? `margin-right: 4em` : ''}
 `;
 
 export default Block;

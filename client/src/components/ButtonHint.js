@@ -25,6 +25,11 @@ class ButtonHint extends React.Component {
   }
 
   componentDidMount() {
+    if (this.props.alwaysOn) {
+      this.setState({ ready: true });
+      return;
+    }
+    
     const onTimeout = () => this.setState({ ready: true });
 
     this.setState({

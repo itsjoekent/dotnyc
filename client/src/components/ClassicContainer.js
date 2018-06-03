@@ -8,6 +8,7 @@ const ClassicContainer = styled.div`
   margin-right: auto;
   margin-top: 4em;
   padding: 1em;
+  box-sizing: border-box;
 `;
 
 export default ClassicContainer;

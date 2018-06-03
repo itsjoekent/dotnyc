@@ -9,6 +9,7 @@ const ParrotButton = block.extend`
   border-radius: 50%;
   background-color: ${props => props.theme.colors.cloud};
   box-shadow: 0px 0px 11px 0px ${props => props.theme.colors.pen};
+  transition: box-shadow 0.25s;
   cursor: pointer;
 
   &:hover {
