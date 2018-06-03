@@ -15,7 +15,8 @@ Each post gets a unique hex code (background color of the page as well?) (3 or 6
 joekent.nyc/#fff/rubber-ducks
             ^          ^
             |          |
-         BG Color   Pathname
+            Theme      Pathname
+            Color   
 
 
 ---------
