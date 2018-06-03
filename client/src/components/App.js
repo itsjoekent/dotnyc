@@ -1,8 +1,9 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import ParrotButtonLink from './ParrotButtonLink';
-import GreetingPage from './GreetingPage';
-import DirectoryPage from './DirectoryPage';
+import AsyncGreetingPage from './AsyncGreetingPage';
+import AsyncDirectoryPage from './AsyncDirectoryPage';
+import AsyncContentPage from './AsyncContentPage';
 import {
   HOME_PATH,
   DIRECTORY_PATH,
@@ -14,9 +15,9 @@ const App = (props) => {
   return (
     <React.Fragment>
       <ParrotButtonLink />
-      <Route exact path={HOME_PATH} component={GreetingPage} />
-      <Route path={DIRECTORY_PATH} component={DirectoryPage} />
-      <Route path={CONTENT_PATH} component={props => JSON.stringify(props)} />
+      <Route exact path={HOME_PATH} component={AsyncGreetingPage} />
+      <Route path={DIRECTORY_PATH} component={AsyncDirectoryPage} />
+      <Route path={CONTENT_PATH} component={AsyncContentPage} />
     </React.Fragment>
   );
 };
