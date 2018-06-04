@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import HeroTypography from './HeroTypography';
 import HeaderTypography from './HeaderTypography';
 import ParagraphTypography from './ParagraphTypography';
-import QuoteTypography from './QuoteTypography';
 import UnstyledAnchor from './UnstyledAnchor';
 import ClassicContainer from './ClassicContainer';
 import WideButton from './WideButton';
@@ -19,8 +18,8 @@ const TwitterHint = styled.div`
 
 const DirectoryPage = (props) => {
   return (
-    <ClassicContainer>
-      <HeroTypography>Welcome Home Jimmy.</HeroTypography>
+    <ClassicContainer doublePaddingTop>
+      <HeroTypography basePaddingTop>Welcome Home Jimmy.</HeroTypography>
       <ParagraphTypography>{p1}</ParagraphTypography>
       <ParagraphTypography>{p2}</ParagraphTypography>
       <UnstyledAnchor href="https://twitter.com/itsjoekent">

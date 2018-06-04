@@ -31,6 +31,14 @@ function catchApiErrors(fn) {
   }
 }
 
+router.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, lav_auth_id, lav_auth_token, Access-Control-Allow-Headers, Access-Control-Request-Headers');
+
+  next();
+});
+
 router.get('/', (req, res) => {
   res.json({ ok: true });
 });

@@ -26,6 +26,7 @@ const TrainSegment = styled.span`
   font-size: ${props => props.theme.fonts.sizes.normal};
 `;
 
+/* eslint-disable jsx-a11y/accessible-emoji */
 const LoadTrain = (props) => {
   return (
     <LoadTrainContainer>
@@ -38,5 +39,6 @@ const LoadTrain = (props) => {
     </LoadTrainContainer>
   );
 };
+/* eslint-enable jsx-a11y/accessible-emoji */
 
 export default LoadTrain;

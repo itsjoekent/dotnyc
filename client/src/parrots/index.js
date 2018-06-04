@@ -70,36 +70,35 @@ import parrot62 from './pirateparrot.gif';
 import parrot63 from './pizzaparrot.gif';
 import parrot64 from './popcornparrot.gif';
 import parrot65 from './portalparrot.gif';
-import parrot66 from './prideparrot.gif';
-import parrot67 from './pumpkinparrot.gif';
-import parrot68 from './reversecongaparrot.gif';
-import parrot69 from './revolutionparrot.gif';
-import parrot70 from './rightparrot.gif';
-import parrot71 from './rotatingparrot.gif';
-import parrot72 from './ryangoslingparrot.gif';
-import parrot73 from './sadparrot.gif';
-import parrot74 from './sassyparrot.gif';
-import parrot75 from './scienceparrot.gif';
-import parrot76 from './shipitparrot.gif';
-import parrot77 from './shufflefurtherparrot.gif';
-import parrot78 from './shuffleparrot.gif';
-import parrot79 from './shufflepartyparrot.gif';
-import parrot80 from './sintparrot.gif';
-import parrot81 from './sithparrot.gif';
-import parrot82 from './skiparrot.gif';
-import parrot83 from './slomoparrot.gif';
-import parrot84 from './slowparrot.gif';
-import parrot85 from './sovjetparrot.gif';
-import parrot86 from './stableparrot.gif';
-import parrot87 from './stalkerparrot.gif';
-import parrot88 from './sushiparrot.gif';
-import parrot89 from './tacoparrot.gif';
-import parrot90 from './thumbsupparrot.gif';
-import parrot91 from './tripletsparrot.gif';
-import parrot92 from './twinsparrot.gif';
-import parrot93 from './ultrafastparrot.gif';
-import parrot94 from './upvotepartyparrot.gif';
-import parrot95 from './wendyparrot.gif';
+import parrot66 from './pumpkinparrot.gif';
+import parrot67 from './reversecongaparrot.gif';
+import parrot68 from './revolutionparrot.gif';
+import parrot69 from './rightparrot.gif';
+import parrot70 from './rotatingparrot.gif';
+import parrot71 from './ryangoslingparrot.gif';
+import parrot72 from './sadparrot.gif';
+import parrot73 from './sassyparrot.gif';
+import parrot74 from './scienceparrot.gif';
+import parrot75 from './shipitparrot.gif';
+import parrot76 from './shufflefurtherparrot.gif';
+import parrot77 from './shuffleparrot.gif';
+import parrot78 from './shufflepartyparrot.gif';
+import parrot79 from './sintparrot.gif';
+import parrot80 from './sithparrot.gif';
+import parrot81 from './skiparrot.gif';
+import parrot82 from './slomoparrot.gif';
+import parrot83 from './slowparrot.gif';
+import parrot84 from './sovjetparrot.gif';
+import parrot85 from './stableparrot.gif';
+import parrot86 from './stalkerparrot.gif';
+import parrot87 from './sushiparrot.gif';
+import parrot88 from './tacoparrot.gif';
+import parrot89 from './thumbsupparrot.gif';
+import parrot90 from './tripletsparrot.gif';
+import parrot91 from './twinsparrot.gif';
+import parrot92 from './ultrafastparrot.gif';
+import parrot93 from './upvotepartyparrot.gif';
+import parrot94 from './wendyparrot.gif';
 
 const parrots = [
   parrot0,
@@ -196,8 +195,7 @@ const parrots = [
   parrot91,
   parrot92,
   parrot93,
-  parrot94,
-  parrot95
+  parrot94
 ];
 
 export default parrots;

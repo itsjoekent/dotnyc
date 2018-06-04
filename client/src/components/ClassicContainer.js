@@ -1,13 +1,12 @@
-import styled from 'styled-components';
+import Block from './Block';
 
-const ClassicContainer = styled.div`
-  display: block;
+const ClassicContainer = Block.extend`
   width: 100%;
   max-width: ${props => props.theme.maxWidth}
   margin-left: auto;
   margin-right: auto;
-  margin-top: 4em;
-  padding: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
   box-sizing: border-box;
 `;
 

@@ -14,7 +14,10 @@ const theme = {
       tiny: `12px`,
       normal: `18px`,
       big: `32px`,
-      yuge: `72px`,
+      yuge: {
+        mobile: `48px`,
+        desktop: `72px`,
+      },
       // tiny: `1vmin`,
       // normal: `2.5vmin`,
       // big: `3.0vh`,

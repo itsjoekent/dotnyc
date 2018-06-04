@@ -19,6 +19,12 @@ const Block = styled.div`
   ${props => props.basePaddingLeft ? `padding-left: 1em` : ''}
   ${props => props.basePaddingRight ? `padding-right: 1em` : ''}
 
+  ${props => props.doublePadding ? `padding: 4em` : ''}
+  ${props => props.doublePaddingTop ? `padding-top: 4em` : ''}
+  ${props => props.doublePaddingBottom ? `padding-bottom: 4em` : ''}
+  ${props => props.doublePaddingLeft ? `padding-left: 4em` : ''}
+  ${props => props.doublePaddingRight ? `padding-right: 4em` : ''}
+
   ${props => props.baseMargin ? `margin: 1em` : ''}
   ${props => props.baseMarginTop ? `margin-top: 1em` : ''}
   ${props => props.baseMarginBottom ? `margin-bottom: 1em` : ''}
