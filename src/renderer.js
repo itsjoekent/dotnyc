@@ -1,5 +1,12 @@
+const fs = require('fs');
+const path = require('path');
+
+const page = fs.readFileSync(path.join(__dirname, '/assets/index.html'));
+
 async function renderer(req, res) {
-  res.send('glo0b');
+  // res.send('glo0b');
+  res.set('Content-Type', 'text/html');
+  res.send(new Buffer(page));
 }
 
 module.exports = renderer;

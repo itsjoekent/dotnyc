@@ -6,10 +6,10 @@ const CLIENT_PATH = path.join(__dirname, '../client');
 const ASSETS_PATH = path.join(__dirname, '/assets');
 
 const pipeline = `
-  cp -R ${CLIENT_PATH}/* ${ASSETS_PATH} &&
-  cd ${ASSETS_PATH} &&
+  cd ${CLIENT_PATH} &&
   npm install &&
   npm run build
+  cp -R ${path.join(CLIENT_PATH, '/build')}/* ${ASSETS_PATH}
 `;
 
 const pipelineProcess = cmd.get(pipeline, (err, data, stderr) => {
