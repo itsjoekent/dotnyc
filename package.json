@@ -1,26 +1,29 @@
 {
   "name": "dotnyc",
+  "version": "0.1.0",
   "private": true,
-  "version": "1.0.0",
-  "description": "Personal website/CMS/life management app",
-  "main": "src/index.js",
-  "scripts": {
-    "start": "node src/prod.js",
-    "start:dev": "NODE_ENV=development nodemon --ignore client/ src/dev.js",
-    "bootstrap": "node src/bootstrap.js",
-    "heroku-postbuild": "npm run bootstrap",
-    "clean-assets": "rm -rf src/assets && mkdir src/assets && touch src/assets/.gitkeep",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "MIT",
   "dependencies": {
-    "express": "^4.16.3",
-    "mongoose": "^5.1.3",
-    "node-cmd": "^3.0.0"
+    "marksy": "^6.1.0",
+    "react": "^16.5.2",
+    "react-app-polyfill": "^0.1.3",
+    "react-dom": "^16.5.2",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.0.4",
+    "styled-components": "^4.0.0-beta.10"
   },
-  "devDependencies": {
-    "dotenv": "^6.0.0",
-    "nodemon": "^1.17.5"
-  }
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

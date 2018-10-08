@@ -1,0 +1,17 @@
+{
+  "entries": [
+    {
+      "directory": "homepage",
+      "route": {
+        "path": "/",
+        "exact": true
+      }
+    },
+    {
+      "directory": "lorem",
+      "route": {
+        "path": "/lorem"
+      }
+    }
+  ]
+}
