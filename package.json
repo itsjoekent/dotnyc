@@ -5,12 +5,20 @@
   "description": "Personal website/CMS/life management app",
   "main": "src/index.js",
   "scripts": {
+<<<<<<< Updated upstream
     "start": "node src/prod.js",
     "start:dev": "NODE_ENV=development nodemon --ignore client/ src/dev.js",
     "bootstrap": "node src/bootstrap.js",
     "heroku-postbuild": "npm run bootstrap",
     "clean-assets": "rm -rf src/assets && mkdir src/assets && touch src/assets/.gitkeep",
     "test": "echo \"Error: no test specified\" && exit 1"
+=======
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "now --public"
+>>>>>>> Stashed changes
   },
   "author": "",
   "license": "MIT",
