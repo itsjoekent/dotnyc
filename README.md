@@ -14,6 +14,12 @@ $ npm install
 
 ## Build + Deploy
 
+Requires the [Now Desktop utility](https://zeit.co/download).
+
+```sh
+$ npm run deploy
+```
+
 ## Create React App Docs
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
