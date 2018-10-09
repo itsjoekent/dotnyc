@@ -1,4 +1,4 @@
-I'm a software engineer primarily concentrated on frontend web development. I take pride in looking at my work beyond code, through the lens of design, ux, product and the culture we live in today. I care about what I spend my time on, whether it's simply for profit or incrementally building a better world.
+I'm a software engineer primarily concentrated on frontend web development. I take pride in looking at my work beyond code, through the lens of design, ux, product and the culture we live in today.
 
 And I hope my coworkers find me humorous.
 
