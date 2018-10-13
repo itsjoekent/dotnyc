@@ -104,7 +104,7 @@ class Image extends React.Component {
 
     return (
       <ImageContainer>
-        <FloatingImageStyle src={image} alt={alt} />
+        {image ? <FloatingImageStyle src={image} alt={alt} shadow /> : null}
         <ImageStyle src={blurPath} alt="Loading image" fadeIn={!! image} />
         {imageCaption}
       </ImageContainer>

@@ -13,6 +13,13 @@
         "path": "/lorem",
         "exact": false
       }
+    },
+    {
+      "directory": "resume",
+      "route": {
+        "path": "/resume",
+        "exact": false
+      }
     }
   ]
 }
