@@ -9,9 +9,9 @@ import {
 } from './Spacer';
 import {
   LayoutSection,
-  SpacedLayoutSection,
   NarrowLayoutSection,
   IndentedLayoutSection,
+  WideLayoutSection,
 } from './Layout';
 import {
   Header,
@@ -141,7 +141,7 @@ const MarkdownImage = (props) => {
 
   switch (layout) {
     case 'column': LayoutComponent = NarrowLayoutSection; break;
-    case 'outset': LayoutComponent = SpacedLayoutSection; break;
+    case 'outset': LayoutComponent = WideLayoutSection; break;
     case 'screen': LayoutComponent = LayoutSection; break;
     default: LayoutComponent = NarrowLayoutSection; break;
   }

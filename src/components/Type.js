@@ -80,6 +80,10 @@ export const Link = styled.a`
     color: ${props => props.theme.colors.lightBlue};
   }
 
+  &:hover {
+    color: ${props => props.theme.colors.darkBlue};
+  }
+
   ${props => props.theme.media.desktopSmall`
     font-size: ${props => props.theme.font.sizing.base.desktop}px;
   `}
