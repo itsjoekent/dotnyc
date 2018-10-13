@@ -134,7 +134,7 @@ const MarkdownHero = (props) => {
 };
 
 const MarkdownImage = (props) => {
-  const { alt, context, layout, src } = props;
+  const { alt, caption, context, credit, layout, src } = props;
   const { directory } = context;
 
   let LayoutComponent = null;
@@ -146,10 +146,18 @@ const MarkdownImage = (props) => {
     default: LayoutComponent = NarrowLayoutSection; break;
   }
 
+  const imageProps = {
+    alt,
+    caption,
+    credit,
+    directory,
+    src,
+  };
+
   return (
     <LayoutComponent>
       <DoubleVerticalSpacer>
-        <Image alt={alt} src={src} directory={directory} />
+        <Image {...imageProps} />
       </DoubleVerticalSpacer>
     </LayoutComponent>
   );

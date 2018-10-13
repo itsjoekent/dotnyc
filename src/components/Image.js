@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { css, keyframes } from 'styled-components';
+import { Caption, PassiveLink } from './Type';
 
 const fadeTimer = 2;
 
@@ -71,14 +72,33 @@ class Image extends React.Component {
   }
 
   render() {
-    const { alt, src } = this.props;
+    const { alt, caption, credit, src } = this.props;
     const { image, fadeComplete } = this.state;
 
     const blurPath = `${this.getDirectoryPath()}_blur_${src}`;
 
+    const imageCaption = (caption || credit) ? (
+      (caption && credit && (
+        <Caption>
+          <PassiveLink href={credit}>{caption}</PassiveLink>
+        </Caption>
+      )) ||
+      (caption && ! credit && (
+        <Caption>{caption}</Caption>
+      )) ||
+      (! caption && credit && (
+        <Caption>
+          <PassiveLink href={credit}>{credit}</PassiveLink>
+        </Caption>
+      ))
+    ) : null;
+
     if (fadeComplete) {
       return (
-        <ImageStyle src={image} alt={alt} shadow />
+        <ImageContainer>
+          <ImageStyle src={image} alt={alt} shadow />
+          {imageCaption}
+        </ImageContainer>
       );
     }
 
@@ -86,6 +106,7 @@ class Image extends React.Component {
       <ImageContainer>
         <FloatingImageStyle src={image} alt={alt} />
         <ImageStyle src={blurPath} alt="Loading image" fadeIn={!! image} />
+        {imageCaption}
       </ImageContainer>
     );
   }
