@@ -8,8 +8,10 @@ import {
   DoubleVerticalSpacer,
 } from './Spacer';
 import {
+  LayoutSection,
   SpacedLayoutSection,
-  WrappedSpacedLayoutSection,
+  NarrowLayoutSection,
+  IndentedLayoutSection,
 } from './Layout';
 import {
   Header,
@@ -22,11 +24,11 @@ const h1 = (props) => {
   const { id, children } = props;
 
   return (
-    <DoubleVerticalSpacer>
-      <WrappedSpacedLayoutSection>
+    <NarrowLayoutSection>
+      <DoubleVerticalSpacer>
         <Header id={id} tier={1}>{children}</Header>
-      </WrappedSpacedLayoutSection>
-    </DoubleVerticalSpacer>
+      </DoubleVerticalSpacer>
+    </NarrowLayoutSection>
   );
 };
 
@@ -34,11 +36,11 @@ const h2 = (props) => {
   const { id, children } = props;
 
   return (
-    <DoubleVerticalSpacer>
-      <WrappedSpacedLayoutSection>
+    <NarrowLayoutSection>
+      <DoubleVerticalSpacer>
         <Header id={id} tier={2}>{children}</Header>
-      </WrappedSpacedLayoutSection>
-    </DoubleVerticalSpacer>
+      </DoubleVerticalSpacer>
+    </NarrowLayoutSection>
   );
 };
 
@@ -46,11 +48,11 @@ const h3 = (props) => {
   const { id, children } = props;
 
   return (
-    <BaseVerticalSpacer>
-      <WrappedSpacedLayoutSection>
+    <NarrowLayoutSection>
+      <BaseVerticalSpacer>
         <Header id={id} tier={3}>{children}</Header>
-      </WrappedSpacedLayoutSection>
-    </BaseVerticalSpacer>
+      </BaseVerticalSpacer>
+    </NarrowLayoutSection>
   );
 };
 
@@ -58,11 +60,11 @@ const h4 = (props) => {
   const { id, children } = props;
 
   return (
-    <BaseVerticalSpacer>
-      <WrappedSpacedLayoutSection>
+    <NarrowLayoutSection>
+      <BaseVerticalSpacer>
         <Header id={id} tier={4}>{children}</Header>
-      </WrappedSpacedLayoutSection>
-    </BaseVerticalSpacer>
+      </BaseVerticalSpacer>
+    </NarrowLayoutSection>
   );
 };
 
@@ -70,11 +72,11 @@ const h5 = (props) => {
   const { id, children } = props;
 
   return (
-    <BaseVerticalSpacer>
-      <WrappedSpacedLayoutSection>
+    <NarrowLayoutSection>
+      <BaseVerticalSpacer>
         <Header id={id} tier={5}>{children}</Header>
-      </WrappedSpacedLayoutSection>
-    </BaseVerticalSpacer>
+      </BaseVerticalSpacer>
+    </NarrowLayoutSection>
   );
 };
 
@@ -82,11 +84,11 @@ const h6 = (props) => {
   const { id, children } = props;
 
   return (
-    <BaseVerticalSpacer>
-      <WrappedSpacedLayoutSection>
+    <NarrowLayoutSection>
+      <BaseVerticalSpacer>
         <Header id={id} tier={6}>{children}</Header>
-      </WrappedSpacedLayoutSection>
-    </BaseVerticalSpacer>
+      </BaseVerticalSpacer>
+    </NarrowLayoutSection>
   );
 };
 
@@ -94,11 +96,11 @@ const p = (props) => {
   const { children } = props;
 
   return (
-    <BaseBottomSpacer>
-      <WrappedSpacedLayoutSection>
+    <NarrowLayoutSection>
+      <BaseBottomSpacer>
         <Paragraph>{children}</Paragraph>
-      </WrappedSpacedLayoutSection>
-    </BaseBottomSpacer>
+      </BaseBottomSpacer>
+    </NarrowLayoutSection>
   );
 };
 
@@ -111,11 +113,11 @@ const DividingLine = styled.div`
 
 const hr = (props) => {
   return (
-    <DoubleVerticalSpacer>
-      <WrappedSpacedLayoutSection>
+    <NarrowLayoutSection>
+      <DoubleVerticalSpacer>
         <DividingLine />
-      </WrappedSpacedLayoutSection>
-    </DoubleVerticalSpacer>
+      </DoubleVerticalSpacer>
+    </NarrowLayoutSection>
   );
 };
 
@@ -123,24 +125,33 @@ const MarkdownHero = (props) => {
   const { children } = props;
 
   return (
-    <DoubleVerticalSpacer>
-      <SpacedLayoutSection>
+    <IndentedLayoutSection>
+      <DoubleVerticalSpacer>
         <Hero>{children}</Hero>
-      </SpacedLayoutSection>
-    </DoubleVerticalSpacer>
+      </DoubleVerticalSpacer>
+    </IndentedLayoutSection>
   );
 };
 
 const MarkdownImage = (props) => {
-  const { alt, context, src } = props;
+  const { alt, context, layout, src } = props;
   const { directory } = context;
 
+  let LayoutComponent = null;
+
+  switch (layout) {
+    case 'column': LayoutComponent = NarrowLayoutSection; break;
+    case 'outset': LayoutComponent = SpacedLayoutSection; break;
+    case 'screen': LayoutComponent = LayoutSection; break;
+    default: LayoutComponent = NarrowLayoutSection; break;
+  }
+
   return (
-    <DoubleVerticalSpacer>
-      <SpacedLayoutSection>
+    <LayoutComponent>
+      <DoubleVerticalSpacer>
         <Image alt={alt} src={src} directory={directory} />
-      </SpacedLayoutSection>
-    </DoubleVerticalSpacer>
+      </DoubleVerticalSpacer>
+    </LayoutComponent>
   );
 };
 

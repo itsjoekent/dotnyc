@@ -31,6 +31,7 @@ const theme = {
     gray: '#919ca1',
     lightBlue: '#33c5ff',
     vividBlue: '#335fff',
+    darkBlue: '#002533',
   },
   font: {
     family: `'Open Sans', sans-serif`,

@@ -27,6 +27,10 @@ const ImageStyle = styled.img`
   ${props => props.fadeIn ? css`
     animation: ${fade} ${fadeTimer}s forwards;
   ` : ''}
+
+  ${props => props.shadow ? css`
+    box-shadow: 0px 0px 20px 0px rgba(1, 1, 1, 0.52);
+  ` : ''}
 `;
 
 const FloatingImageStyle = styled(ImageStyle)`
@@ -74,7 +78,7 @@ class Image extends React.Component {
 
     if (fadeComplete) {
       return (
-        <ImageStyle src={image} alt={alt} />
+        <ImageStyle src={image} alt={alt} shadow />
       );
     }
 
