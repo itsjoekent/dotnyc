@@ -68,6 +68,24 @@ export const Paragraph = styled.p`
   `}
 `;
 
+export const Caption = styled.span`
+  display: block;
+  color: ${props => props.theme.colors.gray};
+  font-family: ${props => props.theme.font.family};
+  font-size: ${props => props.theme.font.sizing.small.mobile}px;
+  font-weight: ${props => props.theme.font.weight.light};
+  margin-top: ${props => props.theme.spacing.base}px;
+  text-align: center;
+
+  &:visited {
+    color: ${props => props.theme.colors.gray};
+  }
+
+  ${props => props.theme.media.desktopSmall`
+    font-size: ${props => props.theme.font.sizing.small.desktop}px;
+  `}
+`;
+
 export const Link = styled.a`
   display: inline;
   color: ${props => props.theme.colors.lightBlue};
