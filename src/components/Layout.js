@@ -38,6 +38,7 @@ export const Layout = styled.article`
   display: block;
   width: 100%;
   margin-top: ${props => props.theme.spacing.base}px;
+  padding-bottom: ${props => props.theme.spacing.base * 2}px;
 
   ${props => props.theme.media.tablet`
     margin-top: ${props => props.theme.spacing.base * 2}px;

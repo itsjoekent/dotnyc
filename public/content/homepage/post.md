@@ -1,8 +1,8 @@
-I'm a software engineer primarily concentrated on frontend web development. I take pride in looking at my work beyond code, through the lens of design, ux, product and the culture we live in today.
+I'm a software engineer primarily concentrated on frontend web development. I take pride in looking at my work beyond code, through the lens of design, ux, and modern day culture.
 
 And I hope my coworkers find me humorous.
 
----
+<Image src="portrait.jpg" layout="column" caption="'It's-a Me, Mario!'" />
 
 I'm not available for hire, but you can find my resume [here](/resume).
 
