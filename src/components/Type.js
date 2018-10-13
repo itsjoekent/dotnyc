@@ -28,6 +28,17 @@ export const Hero = styled.h1`
   font-size: ${props => props.theme.font.sizing.hero.mobile}px;
   font-weight: ${props => props.theme.font.weight.dark};
   line-height: 1.1em;
+  text-transform: uppercase;
+  position: relative;
+
+  &:after {
+    content: '${props => props.children}';
+    position: absolute;
+    top: 0.1em;
+    left: 0.1em;
+    color: ${props => props.theme.colors.vividBlue};
+    z-index: -1;
+  }
 
   ${props => props.theme.media.desktopSmall`
     font-size: ${props => props.theme.font.sizing.hero.desktop}px;
@@ -47,7 +58,7 @@ export const Header = styled.h1`
 `;
 
 export const Paragraph = styled.p`
-  color: ${props => props.theme.colors.gray};
+  color: ${props => props.theme.colors.darkBlue};
   font-family: ${props => props.theme.font.family};
   font-size: ${props => props.theme.font.sizing.base.mobile}px;
   font-weight: ${props => props.theme.font.weight.base};
@@ -68,7 +79,11 @@ export const Link = styled.a`
   &:visited {
     color: ${props => props.theme.colors.lightBlue};
   }
-  
+
+  &:hover {
+    color: ${props => props.theme.colors.darkBlue};
+  }
+
   ${props => props.theme.media.desktopSmall`
     font-size: ${props => props.theme.font.sizing.base.desktop}px;
   `}

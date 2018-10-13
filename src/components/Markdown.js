@@ -1,19 +1,22 @@
 import React, { createElement } from 'react';
 import styled from 'styled-components';
-import marksy from 'marksy/components';
+import marksy from 'marksy/jsx';
+import Image from './Image';
 import {
   BaseBottomSpacer,
   BaseVerticalSpacer,
   DoubleVerticalSpacer,
 } from './Spacer';
 import {
-  SpacedLayoutSection,
-  WrappedSpacedLayoutSection,
+  LayoutSection,
+  NarrowLayoutSection,
+  IndentedLayoutSection,
+  WideLayoutSection,
 } from './Layout';
 import {
   Header,
   Paragraph,
-  Hero as HeroType,
+  Hero,
   Link,
 } from './Type';
 
@@ -21,11 +24,11 @@ const h1 = (props) => {
   const { id, children } = props;
 
   return (
-    <DoubleVerticalSpacer>
-      <WrappedSpacedLayoutSection>
+    <NarrowLayoutSection>
+      <DoubleVerticalSpacer>
         <Header id={id} tier={1}>{children}</Header>
-      </WrappedSpacedLayoutSection>
-    </DoubleVerticalSpacer>
+      </DoubleVerticalSpacer>
+    </NarrowLayoutSection>
   );
 };
 
@@ -33,11 +36,11 @@ const h2 = (props) => {
   const { id, children } = props;
 
   return (
-    <DoubleVerticalSpacer>
-      <WrappedSpacedLayoutSection>
+    <NarrowLayoutSection>
+      <DoubleVerticalSpacer>
         <Header id={id} tier={2}>{children}</Header>
-      </WrappedSpacedLayoutSection>
-    </DoubleVerticalSpacer>
+      </DoubleVerticalSpacer>
+    </NarrowLayoutSection>
   );
 };
 
@@ -45,11 +48,11 @@ const h3 = (props) => {
   const { id, children } = props;
 
   return (
-    <BaseVerticalSpacer>
-      <WrappedSpacedLayoutSection>
+    <NarrowLayoutSection>
+      <BaseVerticalSpacer>
         <Header id={id} tier={3}>{children}</Header>
-      </WrappedSpacedLayoutSection>
-    </BaseVerticalSpacer>
+      </BaseVerticalSpacer>
+    </NarrowLayoutSection>
   );
 };
 
@@ -57,11 +60,11 @@ const h4 = (props) => {
   const { id, children } = props;
 
   return (
-    <BaseVerticalSpacer>
-      <WrappedSpacedLayoutSection>
+    <NarrowLayoutSection>
+      <BaseVerticalSpacer>
         <Header id={id} tier={4}>{children}</Header>
-      </WrappedSpacedLayoutSection>
-    </BaseVerticalSpacer>
+      </BaseVerticalSpacer>
+    </NarrowLayoutSection>
   );
 };
 
@@ -69,11 +72,11 @@ const h5 = (props) => {
   const { id, children } = props;
 
   return (
-    <BaseVerticalSpacer>
-      <WrappedSpacedLayoutSection>
+    <NarrowLayoutSection>
+      <BaseVerticalSpacer>
         <Header id={id} tier={5}>{children}</Header>
-      </WrappedSpacedLayoutSection>
-    </BaseVerticalSpacer>
+      </BaseVerticalSpacer>
+    </NarrowLayoutSection>
   );
 };
 
@@ -81,11 +84,11 @@ const h6 = (props) => {
   const { id, children } = props;
 
   return (
-    <BaseVerticalSpacer>
-      <WrappedSpacedLayoutSection>
+    <NarrowLayoutSection>
+      <BaseVerticalSpacer>
         <Header id={id} tier={6}>{children}</Header>
-      </WrappedSpacedLayoutSection>
-    </BaseVerticalSpacer>
+      </BaseVerticalSpacer>
+    </NarrowLayoutSection>
   );
 };
 
@@ -93,11 +96,11 @@ const p = (props) => {
   const { children } = props;
 
   return (
-    <BaseBottomSpacer>
-      <WrappedSpacedLayoutSection>
+    <NarrowLayoutSection>
+      <BaseBottomSpacer>
         <Paragraph>{children}</Paragraph>
-      </WrappedSpacedLayoutSection>
-    </BaseBottomSpacer>
+      </BaseBottomSpacer>
+    </NarrowLayoutSection>
   );
 };
 
@@ -110,23 +113,45 @@ const DividingLine = styled.div`
 
 const hr = (props) => {
   return (
-    <DoubleVerticalSpacer>
-      <WrappedSpacedLayoutSection>
+    <NarrowLayoutSection>
+      <DoubleVerticalSpacer>
         <DividingLine />
-      </WrappedSpacedLayoutSection>
-    </DoubleVerticalSpacer>
+      </DoubleVerticalSpacer>
+    </NarrowLayoutSection>
   );
 };
 
-const Hero = (props) => {
+const MarkdownHero = (props) => {
   const { children } = props;
 
   return (
-    <DoubleVerticalSpacer>
-      <SpacedLayoutSection>
-        <HeroType>{children}</HeroType>
-      </SpacedLayoutSection>
-    </DoubleVerticalSpacer>
+    <IndentedLayoutSection>
+      <DoubleVerticalSpacer>
+        <Hero>{children}</Hero>
+      </DoubleVerticalSpacer>
+    </IndentedLayoutSection>
+  );
+};
+
+const MarkdownImage = (props) => {
+  const { alt, context, layout, src } = props;
+  const { directory } = context;
+
+  let LayoutComponent = null;
+
+  switch (layout) {
+    case 'column': LayoutComponent = NarrowLayoutSection; break;
+    case 'outset': LayoutComponent = WideLayoutSection; break;
+    case 'screen': LayoutComponent = LayoutSection; break;
+    default: LayoutComponent = NarrowLayoutSection; break;
+  }
+
+  return (
+    <LayoutComponent>
+      <DoubleVerticalSpacer>
+        <Image alt={alt} src={src} directory={directory} />
+      </DoubleVerticalSpacer>
+    </LayoutComponent>
   );
 };
 
@@ -144,7 +169,8 @@ const compiler = marksy({
     a: Link,
   },
   components: {
-    Hero,
+    Hero: MarkdownHero,
+    Image: MarkdownImage,
   },
 });
 
