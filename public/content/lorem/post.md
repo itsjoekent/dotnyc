@@ -2,6 +2,8 @@
 
 Proin a nibh quam. Donec condimentum scelerisque pretium. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean eget vulputate mi, non pretium libero. Proin a ipsum ut tortor ornare molestie. Phasellus odio velit, aliquet eu maximus nec, ultrices a erat. Nam bibendum felis est, in sagittis eros volutpat quis. Fusce eleifend ex sapien, quis vehicula ante auctor non. Quisque sit amet dapibus leo. Nulla tempus tortor magna, vitae blandit orci tristique in.
 
+<Image src="test.jpg" />
+
 # Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat turpis nec neque feugiat imperdiet.
 
 Proin a nibh quam. Donec condimentum scelerisque pretium. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean eget vulputate mi, non pretium libero. Proin a ipsum ut tortor ornare molestie. Phasellus odio velit, aliquet eu maximus nec, ultrices a erat. Nam bibendum felis est, in sagittis eros volutpat quis. Fusce eleifend ex sapien, quis vehicula ante auctor non. Quisque sit amet dapibus leo. Nulla tempus tortor magna, vitae blandit orci tristique in.

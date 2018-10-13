@@ -1,6 +1,7 @@
 import React, { createElement } from 'react';
 import styled from 'styled-components';
-import marksy from 'marksy/components';
+import marksy from 'marksy/jsx';
+import Image from './Image';
 import {
   BaseBottomSpacer,
   BaseVerticalSpacer,
@@ -13,7 +14,7 @@ import {
 import {
   Header,
   Paragraph,
-  Hero as HeroType,
+  Hero,
   Link,
 } from './Type';
 
@@ -118,13 +119,26 @@ const hr = (props) => {
   );
 };
 
-const Hero = (props) => {
+const MarkdownHero = (props) => {
   const { children } = props;
 
   return (
     <DoubleVerticalSpacer>
       <SpacedLayoutSection>
-        <HeroType>{children}</HeroType>
+        <Hero>{children}</Hero>
+      </SpacedLayoutSection>
+    </DoubleVerticalSpacer>
+  );
+};
+
+const MarkdownImage = (props) => {
+  const { alt, context, src } = props;
+  const { directory } = context;
+
+  return (
+    <DoubleVerticalSpacer>
+      <SpacedLayoutSection>
+        <Image alt={alt} src={src} directory={directory} />
       </SpacedLayoutSection>
     </DoubleVerticalSpacer>
   );
@@ -144,7 +158,8 @@ const compiler = marksy({
     a: Link,
   },
   components: {
-    Hero,
+    Hero: MarkdownHero,
+    Image: MarkdownImage,
   },
 });
 
