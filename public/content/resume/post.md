@@ -2,8 +2,6 @@
 
 Over the course of my short but ever-growing career, I've been fortunate to be apart of a number of projects focused on building tools to advocate for social or political change.
 
-BTW: All of this is a rough first draft, in the event you are someone that just happened to organically find this page!
-
 # Blue State Digital
 
 Blue State Digital ("BSD") is an agency and technology company that's been helping clients create change since 2004. I've been a Senior UI Engineer since March 2018 on the BSD Tools, which is a platform that helps hundreds of organizations grow impactful digital programs—from fundraising to advocacy, with personalized communications and deep analysis.
@@ -12,17 +10,17 @@ Below are some of the projects I've been able to lead or contribute towards,
 
 ## Rebuilding the Wrappers Application
 
-The Wrappers Application ("wrappers") is a tool used by BSD Tools clients to personalize their pages by being able to write custom CSS & Javascript that is injected onto the page. The wrappers application is specifically an instrument for managing, editing, storing and serving wrapper content.
+The Wrappers Application ("wrappers") is a tool used by BSD Tools clients to personalize their pages by enabling them to write custom CSS & Javascript that is injected onto a page. The wrappers application is specifically an instrument for managing, editing, storing and serving wrapper content.
 
 <Image alt="Wrappers management interface" src="wrapper_manager.png" layout="outset" />
 
-My responsibility on this project was to architect and rebuild the frontend UI in tandem with a backend developer rebuilding the backend API. For added complexity, I also had to merge data sources from different internal API's for a large set of objects and keep the application feeling responsive to use.
+My responsibility on this project was to architect and rebuild the frontend UI in tandem with a backend developer rebuilding the backend API. For added complexity, I also had to merge data sources from different internal API's for a large set of objects within the frontend and keep the application feeling responsive to use.
 
 This work involved coordinating API specifications between different teams, and communicating with the product team on necessary requirement changes or feature suggestions. Towards the end of the project it also became my responsibility to mentor another developer and onboard them to the project.
 
 ## Creating an internal Design Language System
 
-One of the UI problems facing the BSD Tools team was an inconsistent UX patterns and designs across different applications. To solve this, I started building an internal Design Language System ("DLS") for all of the teams to share and use.
+One of the UI problems facing the BSD Tools team was an inconsistent designs across different applications. To solve this, I started building an internal Design Language System ("DLS") for all of the teams to share and use.
 
 When deciding how to build the DLS, I pitched a novel but unorthodox idea to the team. We would build the application assigned to our team without any styling, just the required business logic. Afterwards, we would make the first iteration of the design system, and paint it onto the application.
 
@@ -36,7 +34,7 @@ Today work on the DLS consists of ongoing maintenance, planning the increase of 
 
 One of the new product offerings by the BSD Tools team is a drag-n-drop, multi-step form builder, internally labeled as "Torchlight". For a portion of my time at Blue State Digital, I was asked to assist the Torchlight team by building out the first iteration of fundraising components which will be used in Torchlight forms.
 
-This work involved creating multiple components for both administrators and users, which had to support a complex set of requirements.
+This work involved creating multiple, complex components for both administrators and users.
 
 (TODO: add form screenshot here)
 
@@ -59,9 +57,9 @@ The registration flow is highly nuanced, as it accounts for the differing voter 
 
 ## Voting Rights House Party
 
-Voting Rights House Party was an initiative by Let America Vote to host a number of house parties on a single day across the country to build an on-the-ground movement for defending voting rights.
+Voting Rights House Party was an initiative by Let America Vote to host a number of house parties across the country to build an on-the-ground movement for defending voting rights.
 
-My involvement with this event was to build a digital platform that could showcase all of the house parties being hosted and provide a method for people to sign up. (Note: The screenshot below is using example event data)
+My involvement with this event campaign was to build a digital platform that could showcase all of the house parties that were being hosted and provide a form for activists to sign up. (Note: The screenshot below is using placeholder event data)
 
 <Image alt="Voting rights house party homepage" src="votingrightshouseparty_homepage.png" credit="votingrightshouseparty.com" layout="outset" />
 
@@ -75,10 +73,12 @@ Throughout my time at DoSomething, I got to work on a series of teams and projec
 
 ## Rebuilding the Campaigns page
 
-Some of the most important work I did at DoSomething was being apart of the application team that started rebuilding the core Campaigns website. This work enabled us to also iterate and experiment with ideas on improving various points of the conversion funnel.
+Some of the most important work I did at DoSomething was being apart of the application team that started rebuilding the core Campaigns website.
 
 As part of this rebuild, I was responsible for building out a number of features such as custom quizzes and the underlying layout logic for a gallery of custom components showcasing the impact young people were making with the platform. (Note: The screenshots below are using example data)
 
 <Image alt="DoSomething.org Quiz" src="dosomething_quiz.png" layout="column" />
 
 <Image alt="DoSomething.org Feed" src="dosomething_feed.png" layout="column" />
+
+I also spent a significant amount of time with product and design team members brainstorming and building out small scale experiments to improve the campaign conversion funnel. This process involved looking at data from multiple sources, and talking to staff members from various teams about their own ideas to improve the user flow.
