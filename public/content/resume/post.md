@@ -36,7 +36,7 @@ One of the new product offerings by the BSD Tools team is a drag-n-drop, multi-s
 
 This work involved creating multiple, complex components for both administrators and users.
 
-(TODO: add form screenshot here)
+<Image alt="Contributions Administration Interface" src="bluestatedigital_contributions_admin.png" layout="outset" />
 
 Additionally, I had to build a custom process for converting custom CSS written by clients into a format suitable for the Stripe.js library.
 
