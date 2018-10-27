@@ -2,10 +2,8 @@ I'm a software engineer primarily concentrated on frontend web development. I ta
 
 And I hope my coworkers find me humorous.
 
+hey@joekent.nyc • [Resume](/resume) • [LinkedIn](https://www.linkedin.com/in/joe-kent-63170077/) • [Github](https://www.github.com/itsjoekent)
+
+[Twitter](https://twitter.com/itsjoekent) • [Instagram](https://www.instagram.com/itsjoekent/)
+
 <Image src="portrait.jpg" layout="column" caption="'It's-a Me, Mario!'" />
-
-I'm not available for hire, but you can find my resume [here](/resume).
-
-You can also follow me on [Twitter](https://twitter.com/itsjoekent) where I frequently tweet about politics and [Instagram](https://www.instagram.com/itsjoekent/) where I post mediocre photography.
-
-You can email me at hey@joekent.nyc.
