@@ -15,7 +15,7 @@ function AsyncComponent(props) {
 
   useEffect(() => {
     async function importComponent() {
-      const { default: DefaultComponent } = await import(`./Home`);
+      const { default: DefaultComponent } = await import(`./${componentName}`);
 
       setComponent({ Component: DefaultComponent });
     }

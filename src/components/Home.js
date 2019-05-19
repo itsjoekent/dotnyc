@@ -221,7 +221,8 @@ function Home(props) {
     assembly.push(generateSpacerStatements());
     assembly.push(generateSpacerStatements());
 
-    const totalFunctions = getRandomInt(2, 3);
+    // const totalFunctions = getRandomInt(2, 3);
+    const totalFunctions = 2;
     for (let functionIndex = 0; functionIndex < totalFunctions; functionIndex++) {
       const functionStatements = generateFunctionStatements();
       for (const statement of functionStatements) {

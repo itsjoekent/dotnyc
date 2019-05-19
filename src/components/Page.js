@@ -9,6 +9,7 @@ const PageContainer = styled.main`
 
   padding-left: ${({ theme }) => theme.spacing.base}px;
   padding-right: ${({ theme }) => theme.spacing.base}px;
+  margin-bottom: ${({ theme }) => theme.spacing.base * 2}px;
 
   width: 100%;
   min-height: 100vh;
