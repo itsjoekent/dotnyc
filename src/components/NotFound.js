@@ -1,24 +1,36 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { BaseBottomSpacer } from './Spacer';
-import { Centered, Column } from './Flex';
-import { Header, PassiveLink } from './Type';
+import styled from 'styled-components';
 
-const backCopy = `← Back Home`;
+const NotFoundContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 80vh;
+`;
 
-const NotFound = (props) => {
+const Header = styled.h1`
+  color: ${({ theme }) => theme.colors.blue[600]};
+
+  text-transform: uppercase;
+
+  margin-bottom: ${({ theme }) => theme.spacing.base}px;
+
+  font-family: ${({ theme }) => theme.font.family};
+  font-size: ${({ theme }) => theme.font.size.hero}px;
+  font-weight: ${({ theme }) => theme.font.weight.dark};
+`;
+
+const Gif = styled.img`
+  max-width: 400px;
+`;
+
+function NotFound(props) {
   return (
-    <Centered fillHeight>
-      <Column>
-        <BaseBottomSpacer>
-          <Header tier={1}>Page not found.</Header>
-        </BaseBottomSpacer>
-        <Link to="/">
-          <PassiveLink>{backCopy}</PassiveLink>
-        </Link>
-      </Column>
-    </Centered>
+    <NotFoundContainer>
+      <Header>page not found</Header>
+      <Gif src={process.env.PUBLIC_URL + '/pizza-rat.gif'} alt="NYC Pizza rat" />
+    </NotFoundContainer>
   );
-};
+}
 
 export default NotFound;

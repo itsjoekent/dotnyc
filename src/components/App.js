@@ -1,27 +1,32 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-import Header from './Header';
-import Content from './Content';
+import { ThemeProvider } from 'styled-components';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import AsyncHome from './AsyncHome';
+import AsyncContentContainer from './AsyncContentContainer';
+import Page from './Page';
 import NotFound from './NotFound';
-import { Column } from './Flex';
-import { entries } from '../contentIndex';
+import GlobalStyle from '../styles/GlobalStyleComponent';
+import theme from '../theme';
 
-const App = (props) => {
+function App() {
   return (
-    <Column as="main" fillHeight>
-      <Header />
-      <Switch>
-        {entries.map(({ directory, route }) => (
-          <Route
-            {...route}
-            key={route.path}
-            render={routeProps => <Content directory={directory} {...routeProps} />}
-          />
-        ))}
-        <Route component={NotFound} />
-      </Switch>
-    </Column>
+    <ThemeProvider theme={theme}>
+      <React.Fragment>
+        <GlobalStyle />
+        <BrowserRouter>
+          <Page>
+            <Switch>
+              <Route path="/" exact component={AsyncHome} />
+              <Route path="/about" component={AsyncContentContainer} />
+              <Route path="/blog/*" component={AsyncContentContainer} />
+              <Route path="/blog" component={AsyncContentContainer} />
+              <Route component={NotFound}/>
+            </Switch>
+          </Page>
+        </BrowserRouter>
+      </React.Fragment>
+    </ThemeProvider>
   );
-};
+}
 
 export default App;
