@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, INLINES } from '@contentful/rich-text-types';
 import { ContentContext } from './ContentContainer';
@@ -197,6 +198,11 @@ function Post(props) {
 
   return (
     <PostArticle>
+      <Helmet>
+        <title>{title} | Joe Kent</title>
+        <meta property="og:title" content={`${title} | Joe Kent`} />
+        {lede && <meta name="description" content={lede} />}
+      </Helmet>
       <DoubleSpacing>
         <PostTitle>{title}</PostTitle>
         {lede && <PostLede>{lede}</PostLede>}

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 import Nav from './Nav';
 import Footer from './Footer';
 
@@ -35,6 +36,10 @@ function Page(props) {
   return (
     <PageContainer>
       <MaxColumn>
+        <Helmet>
+          <title>Joe Kent</title>
+          <meta name="description" content="Joe Kent's portfolio site" />
+        </Helmet>
         <Nav />
         {children}
         <Footer />
