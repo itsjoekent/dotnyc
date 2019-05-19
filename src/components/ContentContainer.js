@@ -9,7 +9,7 @@ function ContentContainer(props) {
   const [contentValue, setContentValue] = useState(null);
   const [pageNotFound, setPageNotFound] = useState(false);
 
-  const { path } = match;
+  const { url: path } = match;
 
   useEffect(() => {
     async function fetchContent() {
