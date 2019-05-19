@@ -83,7 +83,7 @@ const CoverImageTitle = styled.span`
 `;
 
 const CoverImageDescription = styled.span`
-  color: ${({ theme }) => theme.colors.bw[300]};
+  color: ${({ theme }) => theme.colors.bw[600]};
 
   font-family: ${({ theme }) => theme.font.family};
   font-size: ${({ theme }) => theme.font.size.small}px;
