@@ -40,11 +40,7 @@ function ContentContainer(props) {
       setContentValue(match);
     }
 
-    if (process.env.NODE_ENV === 'development') {
-      fetchContent();
-    } else {
-      // read from page global variable.
-    }
+    fetchContent();
   }, [path]);
 
   if (pageNotFound) {
