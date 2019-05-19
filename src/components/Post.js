@@ -122,7 +122,13 @@ const GalleryContainer = styled.div`
 `;
 
 const GalleryItem = styled.div`
-  flex: ${({ itemWidth, theme }) => `0 0 calc(${itemWidth} - ${theme.spacing.base}px)`};
+  flex: 0 0 100%;
+  margin-bottom: ${({ theme }) => theme.spacing.base / 2}px;
+
+  ${({ theme }) => theme.media.tablet`
+    margin-bottom: 0;
+    flex: ${({ itemWidth, theme }) => `0 0 calc(${itemWidth} - ${theme.spacing.base}px)`};
+  `}
 `;
 
 const options = {
@@ -187,7 +193,7 @@ function Post(props) {
     return null;
   }
 
-  const { fields: { title, lede, publishedAt, markup } } = content;
+  const { fields: { title, lede, markup } } = content;
 
   return (
     <PostArticle>
