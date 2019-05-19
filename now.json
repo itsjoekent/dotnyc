@@ -8,9 +8,11 @@
     "www.joekent.nyc",
     "joekent.nyc"
   ],
-  "env": {
-    "REACT_APP_CONTENTFUL_SPACE_ID": "8z6touoxt6uv",
-    "REACT_APP_CONTENTFUL_ACCESS_TOKEN": "k9TlZ6kwivLV-t5dXF1RRecmtHfZXNpiIlfenIBo_Zc"
+  "build": {
+    "env": {
+      "REACT_APP_CONTENTFUL_SPACE_ID": "@contentful-space-id",
+      "REACT_APP_CONTENTFUL_ACCESS_TOKEN": "@contentful-access-token"
+    }
   },
   "routes": [
     { "src": "/static/(.*)", "headers": { "cache-control": "s-maxage=31536000,immutable" }, "dest": "/static/$1" },
