@@ -34,7 +34,7 @@ const DoubleSpacing = styled.div`
 `;
 
 const PostTitle = styled.h1`
-  color: ${({ theme }) => theme.colors.blue[600]};
+  color: ${({ theme }) => theme.colors.lime[500]};
 
   font-family: ${({ theme }) => theme.font.family};
   font-size: ${({ theme }) => theme.font.size.hero}px;
@@ -103,7 +103,7 @@ const Paragraph = styled.p`
 const Link = styled.a`
   display: inline;
 
-  color: ${({ theme }) => theme.colors.blue[900]};
+  color: ${({ theme }) => theme.colors.lime[900]};
 
   font-family: ${({ theme }) => theme.font.family};
   font-size: ${({ theme }) => theme.font.size.base}px;

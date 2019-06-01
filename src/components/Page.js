@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 import Nav from './Nav';
-import Footer from './Footer';
 
 const PageContainer = styled.main`
   display: flex;
@@ -10,12 +9,24 @@ const PageContainer = styled.main`
 
   padding-left: ${({ theme }) => theme.spacing.base}px;
   padding-right: ${({ theme }) => theme.spacing.base}px;
-  margin-bottom: ${({ theme }) => theme.spacing.base * 2}px;
+  padding-bottom: ${({ theme }) => theme.spacing.base * 2}px;
 
   width: 100%;
   min-height: 100vh;
 
-  background-color: ${({ theme }) => theme.colors.blue[100]};
+  padding-top: 4px;
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: ${({ theme }) => theme.colors.lime[500]};
+  }
 `;
 
 const MaxColumn = styled.article`
@@ -42,7 +53,6 @@ function Page(props) {
         </Helmet>
         <Nav />
         {children}
-        <Footer />
       </MaxColumn>
     </PageContainer>
   );

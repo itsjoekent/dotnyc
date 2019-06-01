@@ -49,6 +49,17 @@ const theme = {
       800: '#3297b0',
       900: '#2a7d92',
     },
+    lime: {
+      100: '#f8fdfb',
+      200: '#d9f4ec',
+      300: '#bbebdd',
+      400: '#9ce3cd',
+      500: '#7edabe',
+      600: '#60d1af',
+      700: '#41c99f',
+      800: '#32b08a',
+      900: '#2a9172',
+    },
   },
   font: {
     family: `'Open Sans', sans-serif`,

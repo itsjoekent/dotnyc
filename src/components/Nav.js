@@ -1,5 +1,6 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
+import { withRouter } from 'react-router-dom';
 import RouterLink from './RouterLink'
 
 const NavRow = styled.nav`
@@ -19,15 +20,13 @@ const SecondaryNavGroup = styled.nav`
 const HomeButton = styled.span`
   display: block;
 
-  transition: padding 0.25s;
-
   padding-top: ${({ theme }) => theme.spacing.interval * 2}px;
   padding-bottom: ${({ theme }) => theme.spacing.interval * 2}px;
   padding-left: ${({ theme }) => theme.spacing.interval * 4}px;
   padding-right: ${({ theme }) => theme.spacing.interval * 4}px;
 
-  color: ${({ theme }) => theme.colors.blue[100]};
-  background-color: ${({ theme }) => theme.colors.blue[900]};
+  color: ${({ theme }) => theme.colors.bw[700]};
+  background-color: ${({ theme }) => theme.colors.lime[500]};
 
   font-family: ${({ theme }) => theme.font.family};
   font-size: ${({ theme }) => theme.font.size.small}px;
@@ -37,9 +36,10 @@ const HomeButton = styled.span`
   text-transform: uppercase;
   text-decoration: none;
 
+  transition: color 0.15s linear;
+
   &:hover {
-    padding-top: ${({ theme }) => theme.spacing.interval * 3}px;
-    padding-bottom: ${({ theme }) => theme.spacing.interval * 3}px;
+    color: ${({ theme }) => theme.colors.bw[100]};
   }
 `;
 
@@ -48,15 +48,9 @@ const NavLinkSpacer = styled.div`
 
   padding-left: ${({ theme }) => theme.spacing.interval * 4}px;
   padding-right: ${({ theme }) => theme.spacing.interval * 4}px;
-`;
 
-const navLinkHoverAnimation = keyframes`
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 100%;
+  &:hover {
+    color: ${({ theme }) => theme.colors.bw[700]};
   }
 `;
 
@@ -64,7 +58,7 @@ const NavLink = styled.span`
   display: inline-block;
   position: relative;
 
-  color: ${({ isActive, theme }) => isActive ? theme.colors.blue[900] : theme.colors.bw[800]};
+  color: ${({ isActive, theme }) => isActive ? theme.colors.lime[500] : theme.colors.bw[500]};
 
   font-family: ${({ theme }) => theme.font.family};
   font-size: ${({ theme }) => theme.font.size.small}px;
@@ -74,24 +68,33 @@ const NavLink = styled.span`
   text-transform: uppercase;
   text-decoration: none;
 
+  &:after {
+    content: '';
+    width: 90%;
+    height: ${({ isActive }) => isActive ? '2' : '0'}px;
+    display: block;
+    position: absolute;
+    left: 0px;
+    bottom: -4px;
+    background-color: ${({ theme }) => theme.colors.lime[500]};
+  }
+
   &:hover {
+    color: ${({ theme }) => theme.colors.bw[700]};
+
     &:after {
-      content: '';
-      position: absolute;
-      display: block;
-
-      height: 2px;
-      bottom: 0;
-      left: 0;
-
-      animation: ${navLinkHoverAnimation} 0.5s forwards;
-      border-radius: 2px;
-      background-color: ${({ theme }) => theme.colors.blue[900]};
+      background-color: ${({ theme }) => theme.colors.bw[700]};
     }
   }
 `;
 
 function Nav(props) {
+  const { location: { pathname } } = props;
+
+  function isActive(path) {
+    return pathname === path;
+  }
+
   return (
     <NavRow>
       <RouterLink to="/">
@@ -100,12 +103,12 @@ function Nav(props) {
       <SecondaryNavGroup>
         <RouterLink to="/about">
           <NavLinkSpacer>
-            <NavLink>About</NavLink>
+            <NavLink isActive={isActive('/about')}>About</NavLink>
           </NavLinkSpacer>
         </RouterLink>
         <RouterLink to="/blog">
           <NavLinkSpacer>
-            <NavLink>Blog</NavLink>
+            <NavLink isActive={isActive('/blog')}>Blog</NavLink>
           </NavLinkSpacer>
         </RouterLink>
       </SecondaryNavGroup>
@@ -113,4 +116,4 @@ function Nav(props) {
   );
 }
 
-export default Nav;
+export default withRouter(Nav);
