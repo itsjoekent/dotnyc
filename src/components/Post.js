@@ -39,6 +39,9 @@ const PostTitle = styled.h1`
   font-family: ${({ theme }) => theme.font.family};
   font-size: ${({ theme }) => theme.font.size.hero}px;
   font-weight: ${({ theme }) => theme.font.weight.dark};
+
+  line-height: 54px;
+  margin-bottom: ${({ theme }) => theme.spacing.base}px;
 `;
 
 const PostLede = styled.h3`
