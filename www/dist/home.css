@@ -1,0 +1,104 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh
+}
+
+@media (min-width: 768px) {
+
+  .home {
+    flex-direction: row;
+    height: 100vh
+}
+  }
+
+.home .home__bio {
+    margin-bottom: var(--s5x);
+  }
+
+.home .home__bio p {
+      font-family: var(--serif);
+      font-weight: var(--serif-regular);
+      font-size: var(--serif-2x);
+      color: var(--c700);
+      margin-bottom: var(--s2x);
+    }
+
+.home .home__bio a {
+      text-decoration: underline;
+      color: inherit;
+    }
+
+.home .home__bio .home__bio-lede {
+      font-weight: var(--serif-bold);
+      font-size: var(--serif-3x);
+      margin-bottom: var(--s3x);
+    }
+
+.home .home__photo {
+    width: 100%;
+    height: 40vh;
+
+    background-image: url(/assets/background-tall.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat
+  }
+
+@media (min-width: 768px) {
+
+  .home .home__photo {
+      width: 75%;
+      height: 100%;
+      background-image: url(/assets/background-wide.jpg)
+  }
+    }
+
+.home .home__content {
+    width: 100%;
+    min-height: 60vh;
+    padding: var(--s3x);
+    color: var(--c500);
+    background-color: var(--c100)
+  }
+
+@media (min-width: 768px) {
+
+  .home .home__content {
+      width: 25%;
+      height: 100%;
+      overflow-y: scroll
+  }
+    }
+
+.home .home__blog h2 {
+      font-family: var(--serif);
+      font-weight: var(--serif-bold);
+      font-size: var(--serif-3x);
+      color: var(--c700);
+      margin-bottom: var(--s3x);
+    }
+
+.home .home__blog .blog-item {
+      padding: 0 var(--s2x);
+      margin-bottom: var(--s3x);
+    }
+
+.home .home__blog .blog-item .blog-item__title {
+        display: block;
+        font-family: var(--serif);
+        font-weight: var(--serif-bold);
+        font-size: var(--serif-2x);
+        color: var(--c700);
+        text-decoration: none;
+        margin-bottom: var(--s2x);
+      }
+
+.home .home__blog .blog-item .blog-item__description {
+        font-family: var(--serif);
+        font-weight: var(--serif-normal);
+        font-size: var(--serif-1x);
+        color: var(--c500);
+      }
+
