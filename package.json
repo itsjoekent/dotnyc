@@ -24,7 +24,7 @@
     "build:html": "PRODUCTION=true node src/engine/build.js",
     "build:webpack": "PRODUCTION=true webpack",
     "build": "npm-run-all build:*",
-    "export": "npm run build && npx now"
+    "export": "npx now"
   },
   "browserslist": {
     "production": [
