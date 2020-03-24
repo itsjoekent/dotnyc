@@ -3,10 +3,6 @@
   "builds": [
     { "src": "package.json", "use": "@now/static-build", "config": { "distDir": "www" } }
   ],
-  "alias": [
-    "www.joekent.nyc",
-    "joekent.nyc"
-  ],
   "build": {
     "env": {
       "REACT_APP_CONTENTFUL_SPACE_ID": "@contentful-space-id",
