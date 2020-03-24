@@ -25,7 +25,7 @@ module.exports = ({ html, ...meta }) => template({
     </main>
     <footer>
       <div class="footer__cta">
-        <p>follow me on twitter, for a treat</p>
+        <p>follow me on twitter, <i>for a treat.</i></p>
         <a href="https://twitter.com/itsjoekent">follow me</a>
       </div>
     </footer>
