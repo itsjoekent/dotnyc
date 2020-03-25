@@ -1,0 +1,122 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  color: var(--c700);
+  background-color: var(--c100);
+  background-image: url(/assets/noise.png);
+  background-size: 100px;
+  background-repeat: repeat;
+  padding-top: var(--s7x);
+  padding-bottom: var(--s5x);
+  font-family: var(--serif);
+  font-weight: var(--serif-regular);
+
+  .post__byline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: centerr;
+    margin-bottom: var(--s6x);
+
+    p {
+      font-size: var(--serif-1x);
+      color: var(--c700);
+      margin-bottom: var(--s1x);
+    }
+
+    span {
+      font-size: var(--serif-1x);
+      color: var(--c700);
+    }
+  }
+
+  h1, .post__content h1 {
+    font-size: var(--serif-4x);
+    font-weight: var(--serif-bold);
+    text-align: center;
+    max-width: var(--container-3x);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--s5x);
+    padding-left: var(--s3x);
+    padding-right: var(--s3x);
+
+    @media (min-width: 768px) {
+      font-size: var(--serif-5x);
+    }
+  }
+
+  .post__content {
+    p {
+      font-size: var(--serif-2x);
+      max-width: var(--container-1x);
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: var(--s3x);
+      padding-left: var(--s3x);
+      padding-right: var(--s3x);
+    }
+
+    > p:first-child:first-letter {
+      font-size: 1.6em;
+      font-weight: var(--serif-bold);
+    }
+
+    pre {
+      display: block;
+      width: 100%;
+      max-width: var(--container-2x);
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: var(--s4x);
+      margin-bottom: var(--s4x);
+      padding-left: var(--s3x);
+      padding-right: var(--s3x);
+      background-color: var(--c700);
+
+      code {
+        display: block;
+        padding: var(--s4x);
+        color: var(--c100);
+        background-color: var(--c700);
+        overflow: scroll;
+        font-family: monospace;
+      }
+    }
+
+    code {
+      display: inline-block;
+      font-family: var(--serif);
+      font-weight: var(--serif-regular);
+      font-size: var(--serif-1x);
+      color: var(--c700);
+      background-color: var(--c300);
+      padding: 1px var(--s2x);
+    }
+
+    ol, li {
+      width: 100%;
+      max-width: var(--container-1x);
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: var(--s4x);
+      margin-bottom: var(--s4x);
+      padding-left: var(--s3x);
+      padding-right: var(--s3x);
+    }
+
+    hr {
+      width: 100%;
+      height: 2px;
+      max-width: var(--container-2x);
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: var(--s4x);
+      margin-bottom: var(--s4x);
+      padding-left: var(--s3x);
+      padding-right: var(--s3x);
+      background-color: var(--c300);
+    }
+  }
+}

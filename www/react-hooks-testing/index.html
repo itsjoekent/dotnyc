@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Write unit tests for React Hooks</title>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#166197" />
+    <meta property="og:image" content="/assets/background-wide.jpg" />
+    <meta property="og:description" content="A simple test utility function for custom React hooks" />
+    <link rel="stylesheet" href="/dist/main.css" />
+    
+    <link rel="stylesheet" href="/dist/post.css" />
+    <link rel="stylesheet" href="/dist/layout.css" />
+  
+  </head>
+  <body>
+    
+    <nav>
+      <a href="/" aria-label="Back home">
+        <img src="/assets/arrow.png" alt="Arrow pointing left" />
+        <span>Back home</span>
+      </a>
+    </nav>
+    <main class="post">
+      <h1>Write unit tests for React Hooks</h1>
+      <div class="post__byline">
+        <p>by Joe Kent</p>
+        <span>10/12/2019</span>
+      </div>
+      <div class="post__content">
+        <p>React hooks are an elegant pattern for sharing logic between your React components. If you're not familiar with the concept, you can read more about them <a href="https://reactjs.org/docs/hooks-intro.html">here</a>.</p>
+<p>One of the problems I recently ran into with creating custom React hooks was figuring out a clear strategy for testing the function independently of all the different components consuming the hook.</p>
+<p>For example, imagine we were using the following hook in 10 different components.</p>
+<pre><code class="language-js">import { useState, useEffect } from 'react';
+
+function useExample() {
+  const [value, setValue] = useState(0);
+
+  useEffect(() =&gt; setValue(1), []);
+
+  return value;
+}
+</code></pre>
+<p>This hook will initially return a value equal to 0, and after the initial render will return a value equal to 1. Rather than unit test this logic in several components, it would be great to write tests specific to this hook.</p>
+<p>To write a unit test for this hook, there are two challenges to overcome.</p>
+<ol>
+<li>
+<p>We can't simply run something to the effect of <code>expect(useExample()).toBe...</code>, as it will return a React error stating we invoked the hook outside of a component being rendered.</p>
+</li>
+<li>
+<p>We want a clear pattern to test the initial hook value, and the value after it renders.</p>
+</li>
+</ol>
+<p>To solve these challenges, this I was able to work out a simple test utility function,</p>
+<pre><code class="language-js">import React from 'react';
+import { shallow, mount } from 'enzyme';
+
+export default function testHook(runHook, flushEffects = true) {
+  function HookWrapper() {
+    const output = runHook();
+
+    return (
+      &lt;span output={output} /&gt;
+    );
+  }
+
+  const wrapperFunc = flushEffects ? mount : shallow;
+  const wrapper = wrapperFunc(&lt;HookWrapper /&gt;);
+
+  return wrapper.find('span').props().output;
+}
+</code></pre>
+<p>You can now easily unit test your custom React hooks by passing them to this function. Here is an example of how I would test the custom hook example I created earlier using Jest,</p>
+<pre><code class="language-js">import useExample from '../src/js/hooks/useExample';
+import testHook from './_test-hook';
+
+test('Initial value is 0', () =&gt; {
+  const value = testHook(() =&gt; useExample(), false);
+  expect(value).toBe(0);
+});
+
+test('Value after render is 1', () =&gt; {
+  const value = testHook(() =&gt; useExample());
+  expect(value).toBe(1);
+});
+</code></pre>
+<p>If your application uses Hooks that rely on context values, you can also wrap the <code>HookWrapper</code> with that same context provider, and pass in the context value you want to leverage.</p>
+<pre><code class="language-js">import React from 'react';
+import { shallow, mount } from 'enzyme';
+import { ApplicationContext, defaultApplicationState } from '../src/js/Application';
+
+export default function testHook(runHook, flushEffects = true, useApplicationContext = null) {
+  function HookWrapper() {
+    const output = runHook();
+
+    return (
+      &lt;span output={output} /&gt;
+    );
+  }
+
+  let Container = null;
+
+  if (useApplicationContext) {
+    const value = {
+      ...defaultApplicationState,
+      state: useApplicationContext(defaultApplicationState),
+    };
+
+    Container = ({ children }) =&gt; (
+      &lt;ApplicationContext.Provider value={value}&gt;
+        {children}
+      &lt;/ApplicationContext.Provider&gt;
+    );
+  }
+
+  const wrapperFunc = flushEffects ? mount : shallow;
+
+  const wrapper = wrapperFunc(Container ? (
+    &lt;Container&gt;
+      &lt;HookWrapper /&gt;
+    &lt;/Container&gt;
+  ) : (
+    &lt;HookWrapper /&gt;
+  ));
+
+  return wrapper.find('span').props().output;
+}
+</code></pre>
+<p>To demonstrate, the following is a simple hook that relies on a context value. By default, it will set the return value to 0. If the context value is a valid number, it will set that to be the state value.</p>
+<pre><code class="language-js">import { useState, useEffect, useContext } from 'react';
+import { ApplicationContext } from '../Application';
+
+function useExampleContext() {
+  const [value, setValue] = useState(0);
+  const { contextValue } = useContext(ApplicationContext);
+
+  useEffect(() =&gt; {
+    if (contextValue !== value &amp;&amp; typeof contextValue === 'number') {
+      setValue(contextValue);
+    }
+  }, [contextValue]);
+
+  return value;
+}
+</code></pre>
+<p>And now you can test the hook in the following fashion,</p>
+<pre><code class="language-js">test('Initial value is 0', () =&gt; {
+  const value = testHook(() =&gt; useExampleContext(), false);
+  expect(value).toBe(0);
+});
+
+test('Value matches context value', () =&gt; {
+  const value = testHook(() =&gt; useExampleContext(), true, (state) =&gt; ({ ...state, contextValue: 1 }));
+  expect(value).toBe(1);
+});
+</code></pre>
+<hr>
+<p>I hope this post was helpful for anyone else looking to unit test their custom React hooks, and I am curious to see how others have handled this problem!</p>
+
+      </div>
+    </main>
+    <footer>
+      <div class="footer__cta">
+        <p>follow me on twitter, <i>for a treat.</i></p>
+        <a href="https://twitter.com/itsjoekent">follow me</a>
+      </div>
+    </footer>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161759002-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-161759002-1');
+    </script>
+  </body>
+  <!-- Made with a custom blog engine thing. Fork me on Github! -->
+  <!-- https://github.com/itsjoekent/dotnyc -->
+</html>

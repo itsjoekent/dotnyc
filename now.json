@@ -1,12 +1,7 @@
 {
   "version": 2,
-  "name": "dotnyc",
   "builds": [
-    { "src": "package.json", "use": "@now/static-build", "config": { "distDir": "build" } }
-  ],
-  "alias": [
-    "www.joekent.nyc",
-    "joekent.nyc"
+    { "src": "package.json", "use": "@now/static-build", "config": { "distDir": "www" } }
   ],
   "build": {
     "env": {
@@ -15,13 +10,6 @@
     }
   },
   "routes": [
-    { "src": "/static/(.*)", "headers": { "cache-control": "s-maxage=31536000,immutable" }, "dest": "/static/$1" },
-    { "src": "/favicon.ico", "dest": "/favicon.ico" },
-    { "src": "/asset-manifest.json", "dest": "/asset-manifest.json" },
-    { "src": "/manifest.json", "dest": "/manifest.json" },
-    { "src": "/pizza-rat.gif", "dest": "/pizza-rat.gif" },
-    { "src": "/precache-manifest.(.*)", "dest": "/precache-manifest.$1" },
-    { "src": "/service-worker.js", "headers": { "cache-control": "s-maxage=0" }, "dest": "/service-worker.js" },
-    { "src": "/(.*)", "headers": {"cache-control": "s-maxage=0"}, "dest": "/index.html" }
+    { "src": "/(.*)", "headers": {"cache-control": "s-maxage=0"}, "dest": "/$1" }
   ]
 }
