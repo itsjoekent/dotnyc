@@ -13,7 +13,7 @@ nav {
   span {
     font-family: var(--serif);
     font-weight: var(--serif-bold);
-    font-size: var(--serif-1x);
+    font-size: var(--type-1x);
     color: var(--c500);
     text-decoration: none;
     text-transform: uppercase;
@@ -23,73 +23,5 @@ nav {
   img {
     height: 8px;
     margin-right: var(--s2x);
-  }
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-  background-color: var(--c700);
-  padding: var(--s6x) var(--s5x);
-
-  .footer__cta {
-    width: 100%;
-    max-width: var(--container-3x);
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    position: relative;
-
-    p {
-      font-size: var(--serif-4x);
-      font-weight: var(--serif-bold);
-      color: var(--c100);
-      margin-bottom: var(--s4x);
-
-      @media (min-width: 768px) {
-        font-size: var(--serif-5x);
-      }
-    }
-
-    a {
-      display: block;
-      position: relative;
-      width: fit-content;
-      margin-left: auto;
-      margin-right: auto;
-      font-family: var(--serif);
-      font-weight: var(--serif-bold);
-      font-size: var(--serif-3x);
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      background-color: var(--c100);
-      border: 2px solid var(--c100);
-      color: var(--c700);
-      padding: var(--s2x) var(--s4x);
-
-      &:hover {
-        cursor: pointer;
-        background-color: var(--c700);
-        color: var(--c100);
-      }
-
-      &:before {
-        content: 'click it, coward';
-        display: block;
-        position: absolute;
-        bottom: -24px;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        font-family: var(--serif);
-        font-weight: var(--serif-regular);
-        font-size: var(--serif-1x);
-        font-style: italic;
-        text-transform: none;
-        letter-spacing: normal;
-        color: var(--c100);
-      }
-    }
   }
 }

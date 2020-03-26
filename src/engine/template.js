@@ -4,6 +4,7 @@ module.exports = ({
   title = 'Joe Kent\'s blog',
   description = 'I’m Joe, I live in NYC, and I love to work on things that make the world progressively better.',
   cover = defaultCover,
+  coverAlt = 'Photo of me at an election day event standing in front of Elizabeth Warren.',
   html = '',
   head = '',
 }) => `

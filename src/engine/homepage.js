@@ -4,9 +4,9 @@ const template = require('./template');
 
 module.exports = async (posts) => {
   try {
-    const sortedPosts = posts.sort((a, b) => {
+    const post = posts.sort((a, b) => {
       return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
-    });
+    })[0];
 
     const html = template({
       html: `
@@ -22,14 +22,12 @@ module.exports = async (posts) => {
               <p><a href="https://twitter.com/itsjoekent">I tweet a lot if you're the Twitter type</a>, but feel free to also email me <i>(hey at joekent dot nyc)</i> if that's your jam.</p>
             </div>
             <div class="home__blog">
-              <h2>Read up-</h2>
-              ${sortedPosts.map((post) => `
-                <div class="blog-item">
-                  <a class="blog-item__title" href="${post.path}">${post.title}</a>
-                  <p class="blog-item__description">${post.description}</p>
-                </div>
-              `).join('')}
-            </div>
+              <h2>Latest blog post</h2>
+              <div class="blog-item">
+                <a class="blog-item__title" href="${post.path}">${post.title}</a>
+                <p class="blog-item__description">${post.description}</p>
+              </div>
+              <a href="/blog" class="home__blog-archive">Browse all blog posts</a>
           </div>
         </main>
       `,

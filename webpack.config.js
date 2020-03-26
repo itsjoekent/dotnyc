@@ -7,6 +7,7 @@ module.exports = {
     layout: './src/css/layout.css',
     main: './src/css/main.css',
     post: './src/css/post.css',
+    archive: './src/css/archive.css',
   },
   output: {
     path: path.resolve(__dirname, 'www/dist/'),
