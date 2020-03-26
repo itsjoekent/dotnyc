@@ -1,5 +1,6 @@
 const parser = require('./parser');
 const homepage = require('./homepage');
+const archive = require('./archive');
 
 async function build() {
   try {
@@ -18,10 +19,16 @@ async function build() {
 
     console.log('building homepage...');
 
-    const result = await homepage(pages);
+    const homeResult = await homepage(pages);
 
-    if (result instanceof Error) {
-      throw result;
+    if (homeResult instanceof Error) {
+      throw homeResult;
+    }
+
+    const archiveResult = await archive(pages);
+
+    if (archiveResult instanceof Error) {
+      throw archiveResult;
     }
 
     console.log('done!');
