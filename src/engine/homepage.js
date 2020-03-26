@@ -27,7 +27,7 @@ module.exports = async (posts) => {
                 <a class="blog-item__title" href="${post.path}">${post.title}</a>
                 <p class="blog-item__description">${post.description}</p>
               </div>
-              <a href="/archive" class="home__blog-archive">Browse all blog posts</a>
+              <a href="/blog" class="home__blog-archive">Browse all blog posts</a>
           </div>
         </main>
       `,

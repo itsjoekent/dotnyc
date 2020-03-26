@@ -46,7 +46,7 @@ module.exports = async (posts) => {
       `,
     });
 
-    const htmlDirectory = path.join(__dirname, '../../www/archive');
+    const htmlDirectory = path.join(__dirname, '../../www/blog');
 
     try { await fs.mkdir(htmlDirectory); } catch (error) {}
 
