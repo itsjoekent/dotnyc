@@ -13,7 +13,7 @@ nav {
   span {
     font-family: var(--serif);
     font-weight: var(--serif-bold);
-    font-size: var(--serif-1x);
+    font-size: var(--type-1x);
     color: var(--c500);
     text-decoration: none;
     text-transform: uppercase;
@@ -41,13 +41,13 @@ footer {
     position: relative;
 
     p {
-      font-size: var(--serif-4x);
+      font-size: var(----type-4x);
       font-weight: var(--serif-bold);
       color: var(--c100);
       margin-bottom: var(--s4x);
 
       @media (min-width: 768px) {
-        font-size: var(--serif-5x);
+        font-size: var(--type-5x);
       }
     }
 
@@ -59,7 +59,7 @@ footer {
       margin-right: auto;
       font-family: var(--serif);
       font-weight: var(--serif-bold);
-      font-size: var(--serif-3x);
+      font-size: var(--type-3x);
       text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 4px;
@@ -84,7 +84,7 @@ footer {
         text-align: center;
         font-family: var(--serif);
         font-weight: var(--serif-regular);
-        font-size: var(--serif-1x);
+        font-size: var(--type-1x);
         font-style: italic;
         text-transform: none;
         letter-spacing: normal;

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,700;1,300;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
   --c100: #f5f6f7;
@@ -15,11 +16,14 @@
   --serif: 'Cormorant Garamond', serif;
   --serif-regular: 300;
   --serif-bold: 700;
-  --serif-1x: 14px;
-  --serif-2x: 18px;
-  --serif-3x: 24px;
-  --serif-4x: 32px;
-  --serif-5x: 54px;
+  --sans: 'Montserrat', sans-serif;
+  --sans--regular: 400;
+  --sans--bold: 700;
+  --type-1x: 14px;
+  --type-2x: 18px;
+  --type-3x: 24px;
+  --type-4x: 32px;
+  --type-5x: 54px;
   --container-1x: 500px;
   --container-2x: 600px;
   --container-3x: 960px;
