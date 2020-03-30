@@ -44,4 +44,7 @@ yarn-error.log*
 
 .now
 
-www/dist
+www/*
+!www/favicon.ico
+!www/manifest.json
+!www/assets
