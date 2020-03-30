@@ -10,13 +10,15 @@ The calculator received hundreds of thousands of page views, dozens of media hit
 
 We released 6 policy calculators over the course of the campaign, but our most successful launch after the student debt calculator was in the fall when we released our billionaires calculator. It was a great troll made in response to Bill Gates and other rich people crying in public because they were scared of a wealth tax. What most people don’t know is that behind the scenes, the billionaires calculator was conceptualized by Iram Ali at 9pm in a Slack conversation with me, and then launched less than 24 hours later. Unbeknownst to us at the time, it also ended up launching just hours before Mike Bloomberg had essentially entered the presidential race.
 
-[screencap]
-https://twitter.com/ewarren/status/1192580948275204097
+<div class="tweet-container">
+  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Welcome to the race, <a href="https://twitter.com/MikeBloomberg?ref_src=twsrc%5Etfw">@MikeBloomberg</a>! If you&#39;re looking for policy plans that will make a huge difference for working people and which are very popular, start here: <a href="https://t.co/6UMSAf90NT">https://t.co/6UMSAf90NT</a></p>&mdash; Elizabeth Warren (@ewarren) <a href="https://twitter.com/ewarren/status/1192580948275204097?ref_src=twsrc%5Etfw">November 7, 2019</a></blockquote>
+</div>
 
 We moved on the Bloomberg news so quickly that they nearly sent this tweet before I published Bloomberg in the calculator. And if that sounds crazy, don’t ask about the time Victoria Adams and I literally finished shipping the complete redesign of the entire calculator experience the night before we released our Medicare For All policy/calculator.
 
-[screencap]
-https://twitter.com/jonfavs/status/1192571814171549696
+<div class="tweet-container">
+  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Has Elizabeth Warren welcomed Mike Bloomberg to the race by tweeting her wealth tax calculator at him yet?</p>&mdash; Jon Favreau (@jonfavs) <a href="https://twitter.com/jonfavs/status/1192571814171549696?ref_src=twsrc%5Etfw">November 7, 2019</a></blockquote>
+</div>
 
 Our team did not invent policy calculators, but we treated them differently. **We focused on good design and copywriting that zeroed-in on clarity rather than technocratic policy language.** As a result, the calculators were some of the most persuasive pieces of content on our website. A special shoutout to Bharat, Tess, and the rest of the policy team for always going the extra-mile to explain the plans and to make sure our algorithms were right.
 
@@ -26,8 +28,9 @@ We collectively invested tens of hours of our time across multiple teams buildin
 
 **These pages were beautiful, engaging, and helped the campaign tell a bigger story about where these plans came from and what problems they could solve.** And don’t quote me on this because I might be wrong — but I don’t think any presidential campaign, let alone any political campaign at any level, has ever made a web page that compares to the level of depth we put into scrollytelling.
 
-[gif]
-_The scrollytelling pages aren’t going anywhere, so I highly suggest checking them out. [Wealth Gap](https://elizabethwarren.com/wealth-gap) [Bio](https://elizabethwarren.com/meet-elizabeth)_
+![Showing the interactive scrolling features of Elizabeth's bio page.](https://itsjoekent.s3.amazonaws.com/blog/how-elizabeth-warren-dot-com-redefined-traditional-campaign-websites/scrollytelling-bio.gif)
+
+_The scrollytelling pages aren’t going anywhere, so I highly suggest checking them out: [Wealth Gap](https://elizabethwarren.com/wealth-gap),  [Bio](https://elizabethwarren.com/meet-elizabeth)._
 
 The website team also invested heavily (_against my will*_) in pushing the barrier on how campaigns do personalization on the web. Campaigns spend much of their time building out lists of audiences to target across most of their channels, except on web, where most traffic is treated as anonymous people.
 
@@ -39,8 +42,9 @@ While most campaigns relied on the DNC polling lookup tool (iwillvote.com — _w
 
 Speaking of Democratic party technology failures, lets talk about Iowa caucuses which were a horrendous mess because of the confusing rules that the state party put in place which 3x multiplied the amount of math involved at the caucus site. What didn’t make this process any easier, was the well known technical problems with the app that the Iowa state party had commissioned a company to make. **I’m very proud to say our team not only created an Iowa reporting app that didn’t go down, but the team spent countless hours pouring over the Iowa rules to make sure they handled every possible edge case correctly.** And as a result, we snagged some extra delegates.
 
-[screencap]
-https://twitter.com/titonka/status/1224558023974313985
+<div class="tweet-container">
+  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Spoke to a Warren precinct captain. She told me at her site there was a mistake in the counting/math at first, but Warren camp has its own delegate math app. So she did math and showed folks in charge, helped save a delegate for Warren.<br><br>This is how these things work I guess! 1/</p>&mdash; Danielle Kurtzleben 👾 (@titonka) <a href="https://twitter.com/titonka/status/1224558023974313985?ref_src=twsrc%5Etfw">February 4, 2020</a></blockquote>
+</div>
 
 A small but mighty feature I’m really proud to brag about is our search bar. To my knowledge, no other 2020 campaign had a site-wide search. Scaling search to 80+ plans, 80+ organizing toolkits, and countless other content pages takes a lot of engineering and project management, but it helped thousands of people find the plan they were looking for.
 
@@ -56,8 +60,9 @@ Above all of the technical work we did and all of the incredible content we put 
 
 I want to end by saying that Elizabeth Warren is the strongest person I know. I’m so grateful that I had this opportunity to be in the fight with her, and there are so many moments from this campaign I’ll never forget. It’s going to take some time to reset, but I know myself and so many of my colleagues on Team Warren will be back in the fight before you know it. And hopefully, **the next time someone wants to make a really ambitious website for a Democratic campaign, they will point to ElizabethWarren.com as their north star for what is possible.**
 
-[video embed? tweet screencap?]
-https://twitter.com/itsjoekent/status/1235657684621262849
+<div class="tweet-container">
+  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">There is so much to say about <a href="https://twitter.com/ewarren?ref_src=twsrc%5Etfw">@ewarren</a> and the campaign we ran, but today I say goodbye to the best web team ever. <a href="https://t.co/94wfnD03J5">pic.twitter.com/94wfnD03J5</a></p>&mdash; Joe Kent (@itsjoekent) <a href="https://twitter.com/itsjoekent/status/1235657684621262849?ref_src=twsrc%5Etfw">March 5, 2020</a></blockquote>
+</div>
 
 _(oh — and please hire these brilliant people if they come knocking on your door or get in touch with me if you’d like me to make an introduction!)_
 
@@ -74,3 +79,5 @@ Frontend Engineering: Julia Schultz, Jon Jandoc, Patrick Higgins, Chelsi Asulin,
 Creative: Nathan Maggio, Iram Ali
 
 Ads: Maggie He
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

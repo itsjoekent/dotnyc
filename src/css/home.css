@@ -3,8 +3,8 @@
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
-  color: var(--c100);
-  background-color: var(--c700);
+  color: var(--c700);
+  background-color: var(--c100);
 
   .home__photo {
     width: 100%;
@@ -24,7 +24,7 @@
     width: 100%;
     min-height: 60vh;
     padding: var(--s3x);
-    border-top: 4px solid var(--c500);
+    border-top: 4px solid var(--c700);
   }
 
   .home__bio {
@@ -38,7 +38,7 @@
       font-family: var(--sans);
       font-weight: var(--sans-regular);
       font-size: var(--type-2x);
-      color: var(--c100);
+      color: var(--c700);
       line-height: var(--sans-body-height);
       margin-bottom: var(--s2x);
     }
@@ -103,7 +103,7 @@
       font-family: var(--serif);
       font-weight: var(--serif-bold);
       font-size: var(--type-4x);
-      color: var(--c100);
+      color: var(--c700);
       text-decoration: none;
       margin-bottom: var(--s2x);
 
@@ -117,7 +117,7 @@
       font-family: var(--sans);
       font-weight: var(--sans-normal);
       font-size: var(--type-2x);
-      color: var(--c100);
+      color: var(--c700);
       margin-bottom: var(--s2x);
     }
 

@@ -3,7 +3,9 @@ const path = require('path');
 const MarkdownIt = require('markdown-it');
 const post = require('./post');
 
-const markdown = new MarkdownIt();
+const markdown = new MarkdownIt({
+  html: true,
+});
 
 async function buildPage(pagePath) {
   console.log(`building /${pagePath}...`);

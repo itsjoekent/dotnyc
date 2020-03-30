@@ -11,7 +11,7 @@
   --s2x: 8px;
   --s3x: 16px;
   --s4x: 24px;
-  --s5x: 40px;
+  --s5x: 48px;
   --s6x: 64px;
   --s7x: 96px;
   --serif: 'Cormorant Garamond', serif;
@@ -27,7 +27,7 @@
   --type-4x: 32px;
   --type-5x: 54px;
   --container-1x: 540px;
-  --container-2x: 600px;
+  --container-2x: 800px;
   --container-3x: 960px;
 }
 
