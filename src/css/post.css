@@ -3,7 +3,6 @@
   flex-direction: column;
   color: var(--c700);
   background-color: var(--c100);
-  background-image: url(/assets/noise.png);
   background-size: 100px;
   background-repeat: repeat;
   padding-top: var(--s7x);
@@ -77,7 +76,7 @@
       cursor: pointer;
 
       &:hover {
-        
+        color: var(--cpop);
       }
     }
 

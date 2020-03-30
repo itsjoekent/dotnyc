@@ -3,19 +3,20 @@
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
-  background-color: var(--c100);
+  color: var(--c100);
+  background-color: var(--c700);
 
   .home__photo {
     width: 100%;
     height: 70vh;
 
-    background-image: url(/assets/background-tall.jpg);
+    background-image: url(/assets/background-tall-color.jpg);
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
 
     @media (min-width: 768px) {
-      background-image: url(/assets/background-wide.jpg);
+      background-image: url(/assets/background-wide-color.jpg);
     }
   }
 
@@ -23,8 +24,7 @@
     width: 100%;
     min-height: 60vh;
     padding: var(--s3x);
-    color: var(--c500);
-    background-color: var(--c100);
+    border-top: 4px solid var(--c500);
   }
 
   .home__bio {
@@ -38,7 +38,7 @@
       font-family: var(--sans);
       font-weight: var(--sans-regular);
       font-size: var(--type-2x);
-      color: var(--c700);
+      color: var(--c100);
       line-height: var(--sans-body-height);
       margin-bottom: var(--s2x);
     }
@@ -46,6 +46,10 @@
     a {
       text-decoration: underline;
       color: inherit;
+
+      &:hover {
+        color: var(--cpop);
+      }
     }
 
     .home__bio-lede {
@@ -61,15 +65,6 @@
     max-width: var(--container-3x);
     margin-left: auto;
     margin-right: auto;
-
-    h2 {
-      font-family: var(--sans);
-      font-weight: var(--serif-bold);
-      font-size: var(--type-1x);
-      text-transform: uppercase;
-      color: var(--c700);
-      margin-bottom: var(--s3x);
-    }
 
     .blog-item {
       display: flex;
@@ -108,12 +103,13 @@
       font-family: var(--serif);
       font-weight: var(--serif-bold);
       font-size: var(--type-4x);
-      color: var(--c700);
+      color: var(--c100);
       text-decoration: none;
       margin-bottom: var(--s2x);
 
       &:hover {
         text-decoration: underline;
+        color: var(--cpop);
       }
     }
 
@@ -121,7 +117,7 @@
       font-family: var(--sans);
       font-weight: var(--sans-normal);
       font-size: var(--type-2x);
-      color: var(--c500);
+      color: var(--c100);
       margin-bottom: var(--s2x);
     }
 
@@ -129,7 +125,7 @@
       font-family: var(--sans);
       font-weight: var(--sans-normal);
       font-size: var(--type-1x);
-      color: var(--c500);
+      color: var(--c300);
     }
   }
 }
