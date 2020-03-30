@@ -39,6 +39,7 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+    margin-bottom: var(--s2x);
   }
 
   a {
@@ -56,5 +57,13 @@ footer {
       color: var(--cpop);
       text-decoration: underline;
     }
+  }
+
+  .footer__email {
+    font-family: var(--sans);
+    font-weight: var(--sans-regular);
+    font-size: var(--type-1x);
+    line-height: var(--sans-body-height);
+    color: var(--cpop);
   }
 }

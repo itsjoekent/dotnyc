@@ -9,8 +9,8 @@ function makeCoverImageUrl(cover) {
 }
 
 module.exports = ({
-  title = 'Joe Kent\'s blog',
-  description = 'I’m Joe, I live in NYC, and I love to work on things that make the world progressively better.',
+  title = 'Joe Kent',
+  description = 'I’m Joe, I live in NYC, and this is where I put my ramblings too long for Twitter.',
   cover = defaultCover,
   coverAlt = 'Photo of me at an election day event standing in front of Elizabeth Warren.',
   html = '',
@@ -50,6 +50,8 @@ module.exports = ({
         <a href="https://www.instagram.com/itsjoekent/">instagram</a>
         <a href="https://www.linkedin.com/in/joe-kent-63170077/">linkedin</a>
       </div>
+      <p class="footer__title">Get in touch:</p>
+      <p class="footer__email">hey@joekent.nyc</p>
     </footer>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161759002-1"></script>
     <script>
