@@ -9,9 +9,13 @@ const { execSync } = require('child_process');
   const srcDirectory = path.join(__dirname, '../../src');
 
   function onChange(trigger) {
-    console.log(`${trigger} change detected...`);
-    const output = execSync('npm run build:html');
-    console.log(output.toString('utf8'));
+    try {
+      console.log(`${trigger} change detected...`);
+      const output = execSync('npm run build:html');
+      console.log(output.toString('utf8'));
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   fs.watch(contentDirectory, { recursive: true }, () => onChange('content'));

@@ -10,51 +10,53 @@
   font-family: var(--sans);
   font-weight: var(--sans-regular);
 
-  .post__byline {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: var(--s6x);
-
-    p {
-      font-size: var(--type-1x);
-      color: var(--c700);
-      margin-bottom: var(--s1x);
-    }
-
-    span {
-      font-size: var(--type-1x);
-      color: var(--c700);
-    }
-  }
-
-  h1, .post__content h1 {
+  .post__title {
     font-family: var(--serif);
     font-size: var(--type-4x);
     font-weight: var(--serif-bold);
-    text-align: center;
-    max-width: var(--container-3x);
+    text-align: left;
+    width: 100%;
+    max-width: var(--container-1x);
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: var(--s5x);
-    padding-left: var(--s3x);
-    padding-right: var(--s3x);
+    margin-bottom: var(--s2x);
+    padding-left: var(--s5x);
+    padding-right: var(--s5x);
 
     @media (min-width: 768px) {
-      font-size: var(--type-5x);
+      padding-left: var(--s3x);
+      padding-right: var(--s3x);
     }
   }
 
-  .post__title {
-    margin-bottom: var(--s3x);
+  .post__byline {
+    width: 100%;
+    max-width: var(--container-1x);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--s4x);
+    padding-left: var(--s5x);
+    padding-right: var(--s5x);
+
+    @media (min-width: 768px) {
+      padding-left: var(--s3x);
+      padding-right: var(--s3x);
+    }
+
+    p {
+      font-family: var(--sans);
+      font-weight: var(--sans-regular);
+      font-size: var(--type-1x);
+      line-height: var(--sans-body-height);
+      color: var(--c700);
+    }
   }
 
   .post__content {
     p {
       font-size: var(--type-2x);
       line-height: var(--sans-body-height);
+      width: 100%;
       max-width: var(--container-1x);
       margin-left: auto;
       margin-right: auto;
@@ -70,6 +72,23 @@
 
     p > img {
       width: 100%;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: var(--type-4x);
+      font-weight: var(--serif-bold);
+      text-align: center;
+      max-width: var(--container-3x);
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: var(--s5x);
+      padding-left: var(--s3x);
+      padding-right: var(--s3x);
+
+      @media (min-width: 768px) {
+        font-size: var(--type-5x);
+      }
     }
 
     a {

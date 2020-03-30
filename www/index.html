@@ -15,11 +15,17 @@
     <meta property="twitter:description" content="I’m Joe, I live in NYC, and I love to work on things that make the world progressively better." />
     <meta property="twitter:image" content="https://joekent.nyc/assets/background-wide.jpg" />
     <link rel="stylesheet" href="/dist/main.css" />
+    <link rel="stylesheet" href="/dist/layout.css" />
     
         <link rel="stylesheet" href="/dist/home.css" />
       
   </head>
   <body>
+    <nav>
+      <a href="/" aria-label="Back home">
+        joekent.nyc
+      </a>
+    </nav>
     
         <main class="home">
           <div class="home__photo">
@@ -29,19 +35,49 @@
             <div class="home__bio">
               <h1 class="sr-only">About Me</h1>
               <p class="home__bio-lede">Heyo-</p>
-              <p>I’m Joe, I live in NYC, and I love to work on things that make the world progressively better. You can check out some of my past work <a href="https://www.linkedin.com/in/joe-kent-63170077/">here</a>.</p>
+              <p>I’m Joe, I live in NYC. I've previously worked for Elizabeth Warren's 2020 presidential campaign, Blue State, and DoSomething.org.</p>
               <p><a href="https://twitter.com/itsjoekent">I tweet a lot if you're the Twitter type</a>, but feel free to also email me <i>(hey at joekent dot nyc)</i> if that's your jam.</p>
             </div>
             <div class="home__blog">
-              <h2>Latest blog post</h2>
-              <div class="blog-item">
-                <a class="blog-item__title" href="fed-coronavirus">The Feds Reaction To The Coronavirus, Explained</a>
-                <p class="blog-item__description">Numerous headlines have said the Fed is “spending” trillions to save the financial market.</p>
-              </div>
-              <a href="/archive" class="home__blog-archive">Browse all blog posts</a>
+              <h2>Ramblings</h2>
+              
+                <div class="blog-item">
+                  <a class="blog-item__title" href="fed-coronavirus">The Feds Reaction To The Coronavirus, Explained</a>
+                  <p class="blog-item__description">Numerous headlines have said the Fed is “spending” trillions to save the financial market.</p>
+                  <span class="blog-item__published">Mar. 2020</span>
+                </div>
+              
+                <div class="blog-item">
+                  <a class="blog-item__title" href="ssr-react-realtime">Server Side Rendering React In Realtime Without Melting Your Servers</a>
+                  <p class="blog-item__description">How ElizabethWarren.com was able to render content updates from a headless CMS on the fly, cache everything, and serve the entire website from an S3 bucket.</p>
+                  <span class="blog-item__published">Mar. 2020</span>
+                </div>
+              
+                <div class="blog-item">
+                  <a class="blog-item__title" href="how-elizabeth-warren-dot-com-redefined-traditional-campaign-websites">How ElizabethWarren.com redefined traditional campaign websites</a>
+                  <p class="blog-item__description">Our favorite three words, Go To ElizabethWarren.com</p>
+                  <span class="blog-item__published">Mar. 2020</span>
+                </div>
+              
+                <div class="blog-item">
+                  <a class="blog-item__title" href="react-hooks-testing">Write unit tests for React Hooks</a>
+                  <p class="blog-item__description">A simple test utility function for custom React hooks.</p>
+                  <span class="blog-item__published">Oct. 2019</span>
+                </div>
+              
+            </div>
           </div>
         </main>
       
+    <footer>
+      <p class="footer__title">Follow me:</p>
+      <div class="footer__links">
+        <a href="https://twitter.com/itsjoekent">twitter</a>
+        <a href="https://github.com/itsjoekent">github</a>
+        <a href="https://www.instagram.com/itsjoekent/">instagram</a>
+        <a href="https://www.linkedin.com/in/joe-kent-63170077/">linkedin</a>
+      </div>
+    </footer>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161759002-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
