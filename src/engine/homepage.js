@@ -2,11 +2,21 @@ const fs = require('fs').promises;
 const path = require('path');
 const template = require('./template');
 
+function getFormattedDate(publishedAt) {
+  const date = new Date(publishedAt);
+  const month = [
+    'Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'Jun.',
+    'Jul.', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.',
+  ][date.getMonth()];
+
+  return `${month} ${date.getFullYear()}`;
+}
+
 module.exports = async (posts) => {
   try {
-    const post = posts.sort((a, b) => {
+    const sortedPosts = posts.sort((a, b) => {
       return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
-    })[0];
+    });
 
     const html = template({
       html: `
@@ -22,12 +32,19 @@ module.exports = async (posts) => {
               <p><a href="https://twitter.com/itsjoekent">I tweet a lot if you're the Twitter type</a>, but feel free to also email me <i>(hey at joekent dot nyc)</i> if that's your jam.</p>
             </div>
             <div class="home__blog">
-              <h2>Latest blog post</h2>
-              <div class="blog-item">
-                <a class="blog-item__title" href="${post.path}">${post.title}</a>
-                <p class="blog-item__description">${post.description}</p>
-              </div>
-              <a href="/blog" class="home__blog-archive">Browse all blog posts</a>
+              ${sortedPosts.map((post) => `
+                <div class="blog-item">
+                  <div class="blog-item__photo">
+                    ${post.cover ? `<img src="${post.cover}" alt="${post.coverAlt}" />` : ''}
+                  </div>
+                  <div class="blog-item__details">
+                    <a class="blog-item__title" href="${post.path}">${post.title}</a>
+                    <p class="blog-item__description">${post.description}</p>
+                    <span class="blog-item__published">${getFormattedDate(post.publishedAt)}</span>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
           </div>
         </main>
       `,

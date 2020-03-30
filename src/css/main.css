@@ -25,7 +25,7 @@
   --type-3x: 24px;
   --type-4x: 32px;
   --type-5x: 54px;
-  --container-1x: 500px;
+  --container-1x: 540px;
   --container-2x: 600px;
   --container-3x: 960px;
 }
@@ -60,3 +60,6 @@ a {
   position: absolute;
   width: 1px;
 }
+
+/* #f4a460 */
+/* #030646 */

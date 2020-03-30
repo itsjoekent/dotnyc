@@ -69,6 +69,18 @@
       }
     }
 
+    a {
+      display: inline;
+      font-size: var(--type-2x);
+      line-height: var(--sans-body-height);
+      text-decoration: underline;
+      cursor: pointer;
+
+      &:hover {
+        
+      }
+    }
+
     pre {
       display: block;
       width: 100%;
