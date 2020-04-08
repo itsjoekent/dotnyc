@@ -1,5 +1,7 @@
 {
   "title": "Contact Tracing, Visualized",
   "description": "How extreme data tracking can let our lives return to normal",
-  "publishedAt": "04/08/2020"
+  "publishedAt": "04/08/2020",
+  "cover": "https://itsjoekent.s3.amazonaws.com/blog/contact-tracing/cover.png",
+  "coverAlt": "The contact tracing visualization, showing infected dots and lines illustrating other dots they crossed paths with"  
 }
