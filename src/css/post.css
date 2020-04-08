@@ -199,7 +199,7 @@
       }
     }
 
-    .tweet-container {
+    .container-1x {
       width: 100%;
       max-width: var(--container-1x);
       margin-left: auto;
@@ -212,6 +212,40 @@
         padding-left: var(--s3x);
         padding-right: var(--s3x);
       }
+    }
+
+    .container-2x {
+      width: 100%;
+      max-width: var(--container-2x);
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: var(--s3x);
+      padding-left: var(--s5x);
+      padding-right: var(--s5x);
+
+      @media (min-width: 768px) {
+        padding-left: var(--s3x);
+        padding-right: var(--s3x);
+      }
+    }
+
+    .container-2x__flush {
+      width: 100%;
+      max-width: var(--container-2x);
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: var(--s3x);
+      padding-left: 0;
+      padding-right: 0;
+
+      @media (min-width: 768px) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    .viz-embed {
+      border: none;
     }
   }
 }
