@@ -32,6 +32,8 @@ In theory this data could still be used by Western governments for surveillance,
 
 North Dakota appears to be the first state in America [to launch a contact tracing app](https://bismarcktribune.com/news/local/health/officials-unveil-mobile-app-to-help-with-covid-19-contact-tracing-in-north-dakota/article_76e170b7-f68a-5797-b58b-640f2487956d.html) to contain the spread of COVID-19, but the app is developed by a small in-state private tech company, and seems based on GPS tracking. In order for this to be successful, we need a national solution that is developed by one of our government “swat teams” such as USDS or 18F, alongside a reputable tech firm such as Microsoft or Google that have the infrastructure necessary to collect this much data. This app then needs to be heavily promoted by all state and federal officials at every press conference possible.
 
+_UPDATE: [MIT has developed an app](http://news.mit.edu/2020/bluetooth-covid-19-contact-tracing-0409) similar to the European model that could be widely used in the United States._
+
 Unfortunately, it seems like there is no federal effort to build a contact tracing app, or any real sense of urgency to scale our testing capacity. By all measures it seems like Donald Trump is employing the lightswitch strategy, where we just flip everything back on and hope for the best.
 
 ----
