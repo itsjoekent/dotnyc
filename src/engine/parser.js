@@ -7,6 +7,10 @@ const markdown = new MarkdownIt({
   html: true,
 });
 
+markdown.use(require('markdown-it-anchor'), {
+  level: 2,
+});
+
 async function buildPage(pagePath) {
   console.log(`building /${pagePath}...`);
 

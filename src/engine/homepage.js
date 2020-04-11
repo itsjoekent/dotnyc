@@ -21,6 +21,7 @@ module.exports = async (posts) => {
               <p class="home__bio-lede">Heyo-</p>
               <p>I’m Joe, I live in NYC, and this is where I put my thoughts that are too long for Twitter.</p>
               <p>I've previously worked for Elizabeth Warren's 2020 presidential campaign, Blue State, and DoSomething.org.</p>
+              <p>Get in touch ➡️hey@joekent.nyc • <a href="https://twitter.com/itsjoekent">twitter</a></p>
             </div>
             <div class="home__blog">
               <h2>Ramblings</h2>

@@ -91,6 +91,19 @@
       }
     }
 
+    h2 {
+      font-family: var(--serif);
+      font-size: var(--type-3x);
+      font-weight: var(--serif-bold);
+      max-width: var(--container-1x);
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: var(--s5x);
+      margin-bottom: var(--s3x);
+      padding-left: var(--s3x);
+      padding-right: var(--s3x);
+    }
+
     a {
       display: inline;
       font-size: var(--type-2x);
