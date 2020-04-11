@@ -6,7 +6,7 @@ At a high level, the way this technology works is by having an app on your phone
 
 Your phone keeps a log of everyone you come into contact with who is running this app and is broadcasting advertisements over the Bluetooth service. It is important to note, Bluetooth is not the same as GPS, it cannot determine your physical location. Your contact list is simply a giant list of random numbers representing other devices that were near you at some point.
 
-If you are infected with COVID-19, your list of contacts can be uploaded securely to the cloud, and all of those people can then be notified they were in contact with someone who tested positive for COVID-19, and they should self-isolate themselves and follow CDC guidelines.
+If you test positive for COVID-19, you can upload the unique identifiers your phone was previously broadcasting to the cloud. Meanwhile, everyones phone will be pulling down a list of identifiers that tested positive on a frequent basis so they can compare them to their own contact list. If a match between the cloud list and your local list is found, you will be notified to self-isolate and follow CDC guidelines.
 
 The following sections are an in-depth look at each component of this contact-tracing specification. It is important to note this is just a specification for an API, this code being described is not live on your phone, yet.
 
