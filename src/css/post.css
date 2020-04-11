@@ -100,8 +100,13 @@
       margin-right: auto;
       margin-top: var(--s5x);
       margin-bottom: var(--s3x);
-      padding-left: var(--s3x);
-      padding-right: var(--s3x);
+      padding-left: var(--s5x);
+      padding-right: var(--s5x);
+
+      @media (min-width: 768px) {
+        padding-left: var(--s3x);
+        padding-right: var(--s3x);
+      }
     }
 
     a {
