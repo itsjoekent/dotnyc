@@ -96,6 +96,8 @@ Even if you had a sophisticated multi-person operation to triangulate someone, t
 
 Nope!
 
+But it should be noted that many storefronts today use "Bluetooth beacons" to identify shoppers, and those stores could theoretically use the diagnosis keys in conjunction with the passive Bluetooth data they collect to build targetted marketing lists of people who tested positive for COVID-19. This would be highly immoral and unethical, but it would be possible.
+
 **Does this use GPS at all?**
 
 No.
@@ -138,4 +140,6 @@ All apps following this specification and using the respective API’s should be
 
 **Who runs the central server(s) that all of this data reports back too?**
 
-This isn’t totally clear from the press release or the specification. Presumingly Apple and/or Google are running them.
+This isn’t totally clear from the press release or the specification.
+
+_Updated April 11th to incoporate minor feedback to the summary and expanding on the marketing surveillance FAQ question_
