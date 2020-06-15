@@ -5,18 +5,15 @@ nav {
   z-index: 100;
 
   a {
-    font-family: var(--sans);
-    font-weight: var(--sans-bold);
-    font-size: var(--type-1x);
-    color: var(--cpop);
-    background-color: var(--c700);
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    padding: 1px 6px;
+    display: block;
+    background-image: url(/assets/face.jpg);
+    background-size: cover;
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
 
     &:hover {
-      color: var(--c100);
+      background-image: url(/assets/pizza-rat.gif);
     }
   }
 }

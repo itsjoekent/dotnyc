@@ -9,36 +9,26 @@ module.exports = async (posts) => {
       return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
     });
 
+    const rawHomeHtml = await fs.readFile(path.join(__dirname, '../html/home.html'), 'utf-8');
+
+    const formattedHomeHtml = rawHomeHtml
+      .replace('<!-- BLOG LINKS -->', sortedPosts.map((post) => `
+        <li class="blog-entry">
+          <span class="blog-entry__publish-date">${getFormattedDate(post.publishedAt)}</span>
+          <a href="${post.path}">
+            <p class="blog-entry__title">${post.title}</p>
+            <p class="blog-entry__description">${post.description}</p>
+          </a>
+        </li>
+      `).join(''));
+
     const html = template({
-      html: `
-        <main class="home">
-          <div class="home__photo">
-            <span class="sr-only">Photo of me at an election day event standing in front of Elizabeth Warren.</span>
-          </div>
-          <div class="home__content">
-            <div class="home__bio">
-              <h1 class="sr-only">About Me</h1>
-              <p class="home__bio-lede">Heyo-</p>
-              <p>I’m Joe, I live in NYC, and this is where I put my thoughts that are too long for Twitter.</p>
-              <p>I've previously worked for Elizabeth Warren's 2020 presidential campaign, Blue State, and DoSomething.org.</p>
-              <p>Get in touch ➡️hey@joekent.nyc • <a href="https://twitter.com/itsjoekent">twitter</a></p>
-            </div>
-            <div class="home__blog">
-              <h2>Ramblings</h2>
-              ${sortedPosts.map((post) => `
-                <div class="blog-item">
-                  <a class="blog-item__title" href="${post.path}">${post.title}</a>
-                  <p class="blog-item__description">${post.description}</p>
-                  <span class="blog-item__published">${getFormattedDate(post.publishedAt)}</span>
-                </div>
-              `).join('')}
-            </div>
-          </div>
-        </main>
-      `,
+      html: formattedHomeHtml,
       head: `
         <link rel="stylesheet" href="/dist/home.css" />
       `,
+      disableNav: true,
+      disableFooter: true,
     });
 
     const filePath = path.join(__dirname, '../../www/index.html');

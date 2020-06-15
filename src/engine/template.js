@@ -15,6 +15,8 @@ module.exports = ({
   coverAlt = 'Photo of me at an election day event standing in front of Elizabeth Warren.',
   html = '',
   head = '',
+  disableNav = false,
+  disableFooter = false,
 }) => `
 <!DOCTYPE html>
 <html lang="en">
@@ -36,23 +38,13 @@ module.exports = ({
     ${head}
   </head>
   <body>
-    <nav>
-      <a href="/" aria-label="Back home">
-        joekent.nyc
-      </a>
-    </nav>
+    ${disableNav ? '' : `
+      <nav>
+        <a href="/" aria-label="Go back to the homepage"></a>
+      </nav>
+    `}
     ${html}
-    <footer>
-      <p class="footer__title">Follow me:</p>
-      <div class="footer__links">
-        <a href="https://twitter.com/itsjoekent">twitter</a>
-        <a href="https://github.com/itsjoekent">github</a>
-        <a href="https://www.instagram.com/itsjoekent/">instagram</a>
-        <a href="https://www.linkedin.com/in/joe-kent-63170077/">linkedin</a>
-      </div>
-      <p class="footer__title">Get in touch:</p>
-      <p class="footer__email">hey@joekent.nyc</p>
-    </footer>
+    ${disableFooter ? '' : `<footer> <!-- TODO --> </footer>`}
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161759002-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];

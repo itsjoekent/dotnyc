@@ -1,48 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,700;1,300;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
 
 :root {
-  --c100: #e0f0fd;
-  --c300: #60b0f4;
-  --c500: #0d6dbe;
-  --c700: #052e50;
-  --cpop: #f4a460;
-  --s1x: 4px;
-  --s2x: 8px;
-  --s3x: 16px;
-  --s4x: 24px;
-  --s5x: 48px;
-  --s6x: 64px;
-  --s7x: 96px;
-  --serif: 'Cormorant Garamond', serif;
-  --serif-regular: 300;
-  --serif-bold: 700;
-  --sans: 'Montserrat', sans-serif;
-  --sans-regular: 400;
-  --sans-bold: 700;
-  --sans-body-height: 1.8;
-  --type-1x: 14px;
-  --type-2x: 18px;
-  --type-3x: 24px;
-  --type-4x: 32px;
-  --type-5x: 54px;
-  --container-1x: 540px;
-  --container-2x: 800px;
-  --container-3x: 960px;
+  --black: #0d0d0d;
+  --cyan: #72bcd4;
+  --white: #FFFFFF;
+
+  --title-family: 'Noto Sans JP', sans-serif;
+  --content-family: 'Noto Sans', sans-serif;
+
+  --container-1x: 520px;
+  --container-2x: 960px;
+  --container-3x: 1200px;
 }
 
 html, body {
   margin: 0;
   padding: 0;
-  font-family: var(--sans);
-  font-weight: var(--sans-regular);
 }
 
 * {
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, figure {
   margin: 0;
 }
 

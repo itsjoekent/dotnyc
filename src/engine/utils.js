@@ -1,8 +1,8 @@
 function getFormattedDate(publishedAt) {
   const date = new Date(publishedAt);
   const month = [
-    'Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'Jun.',
-    'Jul.', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.',
+    'January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December',
   ][date.getMonth()];
 
   return `${month} ${date.getFullYear()}`;
