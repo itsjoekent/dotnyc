@@ -6,7 +6,7 @@ At a high level, the way this technology works is by having an app on your phone
 
 Your phone keeps a log of everyone you come into contact with who is running this app and is broadcasting advertisements over the Bluetooth service. It is important to note, Bluetooth is not the same as GPS, it cannot determine your physical location. Your contact list is simply a giant list of random numbers representing other devices that were near you at some point.
 
-If you are infected with COVID-19, your list of contacts can be uploaded securely to the cloud, and all of those people can then be notified they were in contact with someone who tested positive for COVID-19, and they should self-isolate themselves and follow CDC guidelines.
+If you test positive for COVID-19, you can upload the unique identifiers your phone was previously broadcasting to the cloud. Meanwhile, everyones phone will be pulling down a list of identifiers that tested positive on a frequent basis so they can compare them to their own contact list. If a match between the cloud list and your local list is found, you will be notified to self-isolate and follow CDC guidelines.
 
 The following sections are an in-depth look at each component of this contact-tracing specification. It is important to note this is just a specification for an API, this code being described is not live on your phone, yet.
 
@@ -96,6 +96,8 @@ Even if you had a sophisticated multi-person operation to triangulate someone, t
 
 Nope!
 
+But it should be noted that many storefronts today use "Bluetooth beacons" to identify shoppers, and those stores could theoretically use the diagnosis keys in conjunction with the passive Bluetooth data they collect to build targetted marketing lists of people who tested positive for COVID-19. This would be highly immoral and unethical, but it would be possible.
+
 **Does this use GPS at all?**
 
 No.
@@ -138,4 +140,6 @@ All apps following this specification and using the respective API’s should be
 
 **Who runs the central server(s) that all of this data reports back too?**
 
-This isn’t totally clear from the press release or the specification. Presumingly Apple and/or Google are running them.
+This isn’t totally clear from the press release or the specification.
+
+_Updated April 11th to incoporate minor feedback to the summary and expanding on the marketing surveillance FAQ question_
