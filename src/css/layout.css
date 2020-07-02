@@ -1,66 +1,48 @@
 nav {
-  position: absolute;
-  top: 24px;
-  left: 24px;
-  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 
-  a {
+  width: 100%;
+  max-width: var(--container-3x);
+  padding: 16px 24px;
+  margin-left: auto;
+  margin-right: auto;
+
+  position: sticky;
+  top: 0;
+  background-color: var(--white);
+
+  .nav-home {
     display: block;
     background-image: url(/assets/face.jpg);
     background-size: cover;
-    width: 64px;
-    height: 64px;
+    width: 42px;
+    height: 42px;
     cursor: pointer;
 
     &:hover {
       background-image: url(/assets/pizza-rat.gif);
     }
   }
-}
 
-footer {
-  width: 100%;
-  padding: var(--s4x);
-  background-color: var(--c700);
-
-  .footer__title {
-    font-family: var(--sans);
-    font-weight: var(--sans-bold);
-    font-size: var(--type-1x);
-    line-height: var(--sans-body-height);
-    color: var(--c300);
-  }
-
-  .footer__links {
+  .nav-menu {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-bottom: var(--s2x);
-  }
 
-  a {
-    display: block;
-    padding-right: var(--s3x);
-    font-family: var(--sans);
-    font-weight: var(--sans-regular);
-    font-size: var(--type-1x);
-    line-height: var(--sans-body-height);
-    color: var(--c100);
-    text-decoration: none;
-    cursor: pointer;
+    a {
+      font-family: var(--title-family);
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--black);
+      margin-left: 16px;
+      text-decoration: none;
 
-    &:hover {
-      color: var(--cpop);
-      text-decoration: underline;
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
     }
-  }
-
-  .footer__email {
-    font-family: var(--sans);
-    font-weight: var(--sans-regular);
-    font-size: var(--type-1x);
-    line-height: var(--sans-body-height);
-    color: var(--cpop);
   }
 }

@@ -15,8 +15,6 @@ module.exports = ({
   coverAlt = 'Photo of me at an election day event standing in front of Elizabeth Warren.',
   html = '',
   head = '',
-  disableNav = false,
-  disableFooter = false,
 }) => `
 <!DOCTYPE html>
 <html lang="en">
@@ -38,13 +36,15 @@ module.exports = ({
     ${head}
   </head>
   <body>
-    ${disableNav ? '' : `
-      <nav>
-        <a href="/" aria-label="Go back to the homepage"></a>
-      </nav>
-    `}
+  <nav>
+    <a class="nav-home" href="/" aria-label="Go back to the homepage"></a>
+    <div class="nav-menu">
+      <a class="nav-twitter" href="https://twitter.com/itsjoekent">@itsjoekent</a>
+      <a class="nav-email" data-copy>hey@joekent.nyc</a>
+    </div>
+  </nav>
     ${html}
-    ${disableFooter ? '' : `<footer> <!-- TODO --> </footer>`}
+    <script src="/dist/copy.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161759002-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];

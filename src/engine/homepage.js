@@ -27,8 +27,6 @@ module.exports = async (posts) => {
       head: `
         <link rel="stylesheet" href="/dist/home.css" />
       `,
-      disableNav: true,
-      disableFooter: true,
     });
 
     const filePath = path.join(__dirname, '../../www/index.html');

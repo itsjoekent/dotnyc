@@ -7,6 +7,7 @@ module.exports = {
     layout: './src/css/layout.css',
     main: './src/css/main.css',
     post: './src/css/post.css',
+    copy: './src/js/copy.js',
   },
   output: {
     path: path.resolve(__dirname, 'www/dist/'),
@@ -22,6 +23,16 @@ module.exports = {
           'css-loader',
           'postcss-loader',
         ],
+      },
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
       },
     ],
   },
