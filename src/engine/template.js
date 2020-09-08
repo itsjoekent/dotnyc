@@ -10,7 +10,7 @@ function makeCoverImageUrl(cover) {
 
 module.exports = ({
   title = 'Joe Kent',
-  description = 'I’m Joe, I live in NYC, and this is where I put my ramblings too long for Twitter.',
+  description = 'hi i’m Joe! a self-taught software engineer based out of NYC.',
   cover = defaultCover,
   coverAlt = 'Photo of me at an election day event standing in front of Elizabeth Warren.',
   html = '',
