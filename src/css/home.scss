@@ -124,7 +124,7 @@
     }
 
     p {
-      font-size: 24px;
+      font-size: 18px;
       font-weight: 400;
       margin-bottom: 24px;
     }
@@ -139,13 +139,55 @@
 .work-list {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 48px;
+  padding: 0;
+  list-style: none;
 
-  > div {
-    padding: 16px 32px;
+  @media (min-width: 1024px) {
+    width: 66.66%;
+  }
+
+  li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 32px;
+
+    @media (min-width: 960px) {
+      width: calc(50% - 24px);
+    }
+
+    img {
+      width: auto;
+      height: auto;
+      max-width: 64px;
+      max-height: 64px;
+      margin-right: 24px;
+    }
+
+    .job-details {
+      display: flex;
+      flex-direction: column;
+
+      h6 {
+        font-family: var(--title-family);
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--black);
+        margin-bottom: 4px;
+      }
+
+      p {
+        font-family: var(--title-family);
+        font-size: 16px;
+        font-weight: 300;
+        color: var(--black);
+      }
+    }
   }
 }
 
@@ -157,10 +199,8 @@
   margin-top: 0;
   margin-bottom: 24px;
 
-  @media (min-width: 768px) {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  @media (min-width: 1024px) {
+    width: 66.66%;
   }
 
   p {
@@ -180,11 +220,9 @@
   }
 
   .work-press__item {
+    border-left: 2px solid #000;
+    padding-left: 16px;
     margin-bottom: 24px;
-
-    @media (min-width: 768px) {
-      width: calc(33.33% - 24px);
-    }
   }
 }
 

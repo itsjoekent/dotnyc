@@ -31,19 +31,23 @@ module.exports = ({
     <meta property="twitter:title" content="${title}" />
     <meta property="twitter:description" content="${description}" />
     <meta property="twitter:image" content="${makeCoverImageUrl(cover)}" />
+    <link rel="preload" href="/assets/pizza-rat.gif" as="image">
     <link rel="stylesheet" href="/dist/main.css" />
     <link rel="stylesheet" href="/dist/layout.css" />
     ${head}
   </head>
   <body>
-  <nav>
-    <a class="nav-home" href="/" aria-label="Go back to the homepage"></a>
-    <div class="nav-menu">
-      <a class="nav-twitter" href="https://twitter.com/itsjoekent">@itsjoekent</a>
-      <a class="nav-email" data-copy>hey@joekent.nyc</a>
-    </div>
-  </nav>
+    <nav>
+      <a class="nav-home" href="/" aria-label="Go back to the homepage"></a>
+      <div class="nav-menu">
+        <a class="nav-twitter" href="https://twitter.com/itsjoekent">@itsjoekent</a>
+        <a class="nav-email" data-copy>hey@joekent.nyc</a>
+      </div>
+    </nav>
     ${html}
+    <footer>
+      Made in NYC · Pizza Rats LLC
+    </footer>
     <script src="/dist/copy.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161759002-1"></script>
     <script>
