@@ -19,13 +19,13 @@ async function buildPage(pagePath) {
     const content = await fs.readFile(path.join(directory, 'content.md'), 'utf8');
     const meta = await fs.readFile(path.join(directory, 'meta.json'), 'utf8');
 
-    const metadata = JSON.parse(meta);
+    const metadata = JSON.parse(meta) || {};
 
-    const { publishedAt = null } = metadata;
+    const { publishedAt = null, hide = false } = metadata;
 
-    if (!publishedAt && process.env.PRODUCTION_BUILD) {
+    if (!hide && !publishedAt && process.env.PRODUCTION_BUILD) {
       console.log(`Skipping /${pagePath} because it's not published.`);
-      return;
+      return null;
     }
 
     const html = post({ ...metadata, html: markdown.render(content) });
@@ -35,6 +35,10 @@ async function buildPage(pagePath) {
     try { await fs.mkdir(htmlDirectory); } catch (error) {}
 
     await fs.writeFile(path.join(htmlDirectory, 'index.html'), html);
+
+    if (hide) {
+      return null;
+    }
 
     return { ...metadata, path: pagePath };
   } catch (error) {
@@ -52,7 +56,7 @@ module.exports = async function parse() {
 
     const pages = await Promise.all(builds);
 
-    return pages;
+    return pages.filter((page) => !!page);
   } catch (error) {
     console.error(error);
     return error;

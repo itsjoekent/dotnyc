@@ -9,9 +9,11 @@ module.exports = ({ html, ...meta }) => template({
   html: `
     <main class="post">
       <h1 class="post__title">${meta.title}</h1>
-      <div class="post__byline">
-        <p>by Joe Kent, ${getFormattedDate(meta.publishedAt)}</p>
-      </div>
+      ${!!meta.publishedAt ? `
+        <div class="post__byline">
+          <p>by Joe Kent, ${getFormattedDate(meta.publishedAt)}</p>
+        </div>
+      `: ''}
       <div class="post__content">
         ${html}
       </div>
