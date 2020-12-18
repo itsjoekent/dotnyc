@@ -6,8 +6,9 @@ module.exports = {
     home: './src/css/home.scss',
     layout: './src/css/layout.css',
     main: './src/css/main.css',
-    post: './src/css/post.css',
+    post: './src/css/post.scss',
     copy: './src/js/copy.js',
+    playlist: './src/js/playlist.js',
   },
   output: {
     path: path.resolve(__dirname, 'www/dist/'),

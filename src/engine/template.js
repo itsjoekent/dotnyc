@@ -15,6 +15,7 @@ module.exports = ({
   coverAlt = 'Photo of me at an election day event standing in front of Elizabeth Warren.',
   html = '',
   head = '',
+  footer = '',
 }) => `
 <!DOCTYPE html>
 <html lang="en">
@@ -49,6 +50,7 @@ module.exports = ({
       Made in NYC · Pizza Rats LLC
     </footer>
     <script src="/dist/copy.js"></script>
+    ${footer}
   </body>
   <!-- Made with a custom blog engine thing. Fork me on Github! -->
   <!-- https://github.com/itsjoekent/dotnyc -->

@@ -19,4 +19,7 @@ module.exports = ({ html, ...meta }) => template({
       </div>
     </main>
   `,
+  footer: `
+    <script src="/dist/playlist.js"></script>
+  `,
 });
