@@ -4,10 +4,12 @@
     "@babel/core": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
     "autoprefixer": "^9.7.5",
+    "aws-sdk": "^2.814.0",
     "babel-loader": "^8.1.0",
     "copy-to-clipboard": "^3.3.1",
     "css-loader": "^3.4.2",
     "cssnano": "^4.1.10",
+    "download": "^8.0.0",
     "file-loader": "^6.0.0",
     "markdown-it": "^10.0.0",
     "markdown-it-anchor": "^5.2.7",
@@ -22,15 +24,14 @@
     "webpack-cli": "^3.3.11"
   },
   "scripts": {
+    "build:html": "PRODUCTION=true node src/engine/build.js",
+    "build:webpack": "PRODUCTION=true webpack",
+    "build": "npm-run-all media build:*",
+    "media": "node src/engine/media.js",
     "start": "npm-run-all --parallel start:*",
     "start:serve": "serve www",
     "start:webpack": "webpack --watch",
-    "start:rebuild": "node src/engine/watcher.js",
-    "build:html": "PRODUCTION=true node src/engine/build.js",
-    "build:webpack": "PRODUCTION=true webpack",
-    "build": "npm-run-all build:*",
-    "deploy:staging": "npx now",
-    "deploy:prod": "npx now --prod"
+    "start:rebuild": "node src/engine/watcher.js"
   },
   "browserslist": {
     "production": [

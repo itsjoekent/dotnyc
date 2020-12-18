@@ -47,4 +47,3 @@ yarn-error.log*
 www/*
 !www/favicon.ico
 !www/manifest.json
-!www/assets
