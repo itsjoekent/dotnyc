@@ -1,12 +1,12 @@
 const AWS = require('aws-sdk');
-const s3 = new AWS.S3();
+const s3 = new AWS.S3({ credentials: false });
 const download = require('download');
 
 async function downloadS3Files(contents) {
   try {
     await Promise.all(contents.map(async ({ Key }) => {
       console.log(`Downloading "${Key}"`);
-      
+
       const remotePath = `https://itsjoekent.s3.amazonaws.com/${Key}`;
       const folderPath = `www/${Key.split('/').slice(0, -1).join('/')}`;
 
