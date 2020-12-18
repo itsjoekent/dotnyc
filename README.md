@@ -7,6 +7,9 @@ This repo is a custom static site engine I created in NodeJS to transform Markdo
 Requires NodeJS >= version 10.
 
 ```sh
+$ cp .env.example .env
+# Create an empty AWS IAM account, does not need any permissions.
+
 $ npm install
 $ npm run media
 $ npm start

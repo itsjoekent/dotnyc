@@ -1,6 +1,12 @@
+require('dotenv').config();
+
 const AWS = require('aws-sdk');
-const s3 = new AWS.S3({ credentials: false });
 const download = require('download');
+
+const s3 = new AWS.S3({
+  accessKeyId: process.env.DOTNYC_AWS_ACCESS_KEY_ID,
+  secretAccessKey: process.env.DOTNYC_AWS_SECRET_ACCESS_KEY,
+});
 
 async function downloadS3Files(contents) {
   try {
