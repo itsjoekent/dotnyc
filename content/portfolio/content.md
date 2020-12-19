@@ -96,6 +96,8 @@ Contract software engineering & web design.
 
 ## Elizabeth Warren 2020 Presidential Campaign
 
+Technical lead, read the deep dive into our work [here](/how-elizabeth-warren-dot-com-redefined-traditional-campaign-websites).
+
 <div class="container-2x__flush">
   <div class="post-playlist" data-playlist>
     <video controls muted>
