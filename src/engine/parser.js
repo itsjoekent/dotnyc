@@ -1,6 +1,8 @@
 const fs = require('fs').promises;
 const path = require('path');
 const MarkdownIt = require('markdown-it');
+const request = require('request');
+const extract = require('extract-zip')
 const post = require('./post');
 
 const markdown = new MarkdownIt({
@@ -11,26 +13,51 @@ markdown.use(require('markdown-it-anchor'), {
   level: 2,
 });
 
+async function downloadMicroSite(remotePath, htmlDirectory) {
+  return new Promise((resolve, reject) => {
+    request(remotePath)
+      .pipe(require('fs').createWriteStream(path.join(htmlDirectory, 'micro.zip')))
+      .on('close', resolve)
+      .on('error', reject);
+  });
+}
+
 async function buildPage(pagePath) {
   console.log(`building /${pagePath}...`);
 
   try {
     const directory = path.join(__dirname, '../../content', pagePath);
-    const content = await fs.readFile(path.join(directory, 'content.md'), 'utf8');
+    const htmlDirectory = path.join(__dirname, '../../www/', pagePath);
+
     const meta = await fs.readFile(path.join(directory, 'meta.json'), 'utf8');
 
     const metadata = JSON.parse(meta) || {};
 
+    if (metadata.micro) {
+      if (process.env.PRODUCTION) {
+        try { await fs.mkdir(htmlDirectory); } catch (error) {}
+
+        console.log(`Downloading ${metadata.micro} ...`);
+        await downloadMicroSite(metadata.micro, htmlDirectory);
+
+        console.log(`Extracting ${metadata.micro} ...`);
+        await extract(path.join(htmlDirectory, 'micro.zip'), { dir: htmlDirectory });
+      } else {
+        console.log(`Not rendering /${pagePath} because it's a micro site & this is development mode.`);
+      }
+
+      return { ...metadata, path: pagePath };
+    }
+
+    const content = await fs.readFile(path.join(directory, 'content.md'), 'utf8');
     const { publishedAt = null, hide = false } = metadata;
 
-    if (!hide && !publishedAt && process.env.PRODUCTION_BUILD) {
+    if (!hide && !publishedAt && process.env.PRODUCTION) {
       console.log(`Skipping /${pagePath} because it's not published.`);
       return null;
     }
 
     const html = post({ ...metadata, html: markdown.render(content) });
-
-    const htmlDirectory = path.join(__dirname, '../../www/', pagePath);
 
     try { await fs.mkdir(htmlDirectory); } catch (error) {}
 
