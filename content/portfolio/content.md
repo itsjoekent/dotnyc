@@ -1,3 +1,26 @@
+## The Fuller Project
+
+Contract software engineering & web design.
+
+<div class="container-2x__flush">
+  <div class="post-gallery">
+    <img class="--half" src="/assets/portfolio/fullerproject-home.png" alt="The Fuller Project Celebrates International Women's Day Homepage" />
+    <img class="--half" src="/assets/portfolio/fullerproject-story.png" alt="The Fuller Project Celebrates International Women's Day, Story page" />
+  </div>
+</div>
+
+
+## Invest In America
+
+Contract software engineering & web design.
+
+<div class="container-2x__flush">
+  <div class="post-gallery">
+    <img class="--half" src="/assets/portfolio/investinamericaproject-home.png" alt="Invest In America Calculator Homepage" />
+    <img class="--half" src="/assets/portfolio/investinamericaproject-mitch.png" alt="Invest In America Calculator, Mitch McConnell Puppet" />
+  </div>
+</div>
+
 ## Ossoff For Senate
 
 Contract software engineering & web design.
@@ -57,7 +80,6 @@ Contract web development.
     <img class="--half" src="/assets/portfolio/all-in-register.png" alt="ALL IN: The Fight For Democracy Voter Registration Page" />
   </div>
 </div>
-
 
 ## Homefield / Vote From Home 2020
 

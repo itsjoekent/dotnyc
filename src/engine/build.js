@@ -31,7 +31,7 @@ async function build() {
   }
 }
 
-if (process.env.PRODUCTION) {
+if (process.env.PRODUCTION || process.env.DEVELOPMENT) {
   build();
 }
 

@@ -11,8 +11,7 @@ const { execSync } = require('child_process');
   function onChange(trigger) {
     try {
       console.log(`${trigger} change detected...`);
-      const output = execSync('npm run build:html');
-      console.log(output.toString('utf8'));
+      const output = execSync('npm run build:html:local', { stdio: 'inherit' });
     } catch (error) {
       console.error(error);
     }
