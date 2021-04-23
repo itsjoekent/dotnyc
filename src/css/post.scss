@@ -158,7 +158,12 @@
       font-size: 18px;
       color: var(--black);
       margin-bottom: 16px;
+      margin-left: 24px;
       padding-left: 12px;
+
+      p {
+        padding: 0;
+      }
     }
 
     hr {
