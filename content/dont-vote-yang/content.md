@@ -58,12 +58,10 @@ Many Yang supporters & surrogates wave away his ridiculous ideas as just Andrew 
 
 Call me crazy, but I think we need a mayor that takes the job seriously as we enter a precarious moment of post COVID-19 recovery. This is a once-in-a-generation opportunity to reimagine and rebuild New York. Please New York, I am begging you, do not hand a political hack the keys to our city.
 
-There are many other candidates running to be mayor, and because this is our first ever citywide ranked choice election, you can pick multiple candidates!
+There are many qualified women running to be mayor, and because this is our first ever citywide ranked choice election, you can pick all three!
 
 - [Dianne Morales](https://www.dianne.nyc/)
-- [Scott Stringer](https://stringerformayor.com/)
 - [Maya Wiley](https://mayawileyformayor.com/)
 - [Kathryn Garcia](https://www.kgfornyc.com/)
-- [Shaun Donovan](https://shaunfornyc.com/)
 
 If you live in New York City, make sure you're registered to vote for this upcoming election, and please share this information with other New Yorker's.
