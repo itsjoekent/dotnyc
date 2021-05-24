@@ -6,7 +6,7 @@ Yang is deeply unqualified, embarrassing, and is not putting forward proposals t
 
 Andrew Yang is consistently polling at the top of the mayoral field, and it’s troubling to imagine that this many New Yorkers support a libertarian in disguise who has put out so many egregious statements and policy proposals during his NYC mayoral campaign, and past presidential campaign.
 
-  Please do not vote for the next mayor of our city because their name sounds familiar, and take a moment to familiarize yourself with not only his campaign's history but also the other candidates running for mayor.
+Please do not vote for the next mayor of our city because their name sounds familiar, and take a moment to familiarize yourself with not only his campaign's history but also the other candidates running for mayor.
 
 ## A long list of reasons you should not vote for Andrew Yang
 
@@ -20,17 +20,33 @@ Andrew Yang is consistently polling at the top of the mayoral field, and it’s 
 
 - Andrew Yang told a group of big business leaders behind closed doors he would not raise their taxes, and would instead consider giving them a lucrative tax break. [[1](https://www.politico.com/states/new-york/albany/story/2021/04/01/yang-cautions-against-taxing-the-rich-in-front-of-pro-business-group-1371337)]
 
+- Andrew Yang has been accused by other mayoral candidates of funneling over $1 million dollars of dark money from his non-profit to his mayoral campaign. [[1](https://www.politico.com/states/new-york/albany/story/2021/05/18/candidates-point-fingers-amid-ethics-allegations-deluge-of-outside-spending-1382964)]
+
+- He has repeatedly engaged in sexist remarks towards another mayoral candidate that is highly qualified & experienced for the job, suggesting she should work for him instead. [[1](https://twitter.com/KGforNYC/status/1387914522548215810)]
+
+- His signature campaign policy, Universal Basic Income, is actually just a single annual $2,000 stipend to the poorest 500,000 New Yorkers, paid for by cutting social services. [[1](https://twitter.com/alexkotch/status/1387780885764771845)]
+
+- Andrew Yang has repeatedly demonstrated a lack of understanding on core local city issues and debates. [[1](https://www.politico.com/states/new-york/albany/story/2021/05/20/yang-fumbles-on-city-issues-as-race-for-mayor-gets-more-competitive-1383373)]
+
+- Andrew Yang proposed a dangerous "two strike" rule as a way for the NYPD to arrest individuals after calls for disturbances or a mental health crisis [[1](https://twitter.com/MayorsRace2021/status/1395389576877838341)].
+
 - Andrew Yang chose to use people standing in line for food banks as props for his campaign video. [[1](https://twitter.com/juliacarmel__/status/1350990496785641476)]
 
 - Andrew Yang made offensive, pandering and tone-deaf remarks to the Stonewall Democrats of NYC. [[1](https://www.nytimes.com/2021/04/22/nyregion/andrew-yang-gays-stonewall.html)]
 
 - Andrew Yang ditched a forum with the Muslim Democratic Club of New York to instead record a podcast episode with a prolific islamaphobe. [[1](https://www.nydailynews.com/news/politics/new-york-elections-government/ny-nyc-mayoral-race-andrew-yang-sam-harris-muslim-forum-20210217-oydxc2qgdfaizcx77fjmknxoca-story.html)]
 
+- His campaign education plan is so anti-progressive he received a "negative score that cannot be graphed" from the People's Plan NYC, and as part of his education plan the campaign announced their intent to privatize speech therapy. [[1](https://twitter.com/PeoplesPlanNYC/status/1396815667517661188), [2](https://twitter.com/Liat_RO/status/1393003366268211201)]
+
 - Andrew Yang believes one of the top issues facing our city is the NYPD not being harsh enough in enforcing the rules against street vendors. [[1](https://www.politico.com/news/2021/04/15/yang-street-vendors-tweet-482019)]
+
+- After a tragic shooting in Times Square, the most policed and surveilled neighborhood of NYC, Andrew Yang said this was an example of "why we can't defund the police". [[1](https://twitter.com/erinmdurkin/status/1391395379900559364)]
+
+- Andrew Yang was the only candidate at the first NYC mayoral debate to not support a city-wide composting program. [[1](https://twitter.com/JuliaCarmel__/status/1392998497717215239)]
 
 - Andrew Yang is so in touch with our city that he believes that banning construction scaffolding is a key issue that New Yorkers are concerned about. [[1](https://www.amny.com/news/137531281/)]
 
-- Andrew Yang is proposing that the city spend zero dollars to repair existing New York City public housing, which have been in great disrepair and need urgent attention. [[1](https://twitter.com/TweetBenMax/status/1357710267421982720)]
+- Andrew Yang is proposing that the city spend zero dollars to repair existing New York City public housing, which has been in great disrepair and needs urgent attention. [[1](https://twitter.com/TweetBenMax/status/1357710267421982720)]
 
 - Instead, Andrew Yang is proposing the city creates “TikTok hype houses”. [[1](https://www.insider.com/andrew-yang-mayor-campaign-new-york-city-nyc-tiktok-collab-hype-house)]
 
@@ -50,7 +66,13 @@ Andrew Yang is consistently polling at the top of the mayoral field, and it’s 
 
 - Andrew Yang spoke out against abortions during the 2020 election. [[1](https://twitter.com/Biaggi4NY/status/1380894778687098887)]
 
+- His comments on Israel were far enough to the right that they were endorsed by Stephen Miller, Meghan McCain, Ted Cruz, and Donald Trump Jr. [[1](https://www.vice.com/en/article/v7ed48/andrew-yang-suddenly-has-some-big-fans-in-trumpworld)] 
+
+- Andrew Yang, his campaign, and his book publisher, have refused to provide evidence that Yang did profit from his campaign spending $240,000 to buy copies of his own book. [[1](https://www.cityandstateny.com/articles/politics/campaign-confidential/look-andrew-yangs-money.html)]
+
 - Andrew Yang told the current mayor of New York to not spend federal aid dollars allocated to the city, so that he could instead spend the money if he were to become mayor. [[1](https://www.nydailynews.com/news/politics/nyc-elections-2021/ny-nyc-mayoral-candidate-maya-wiley-andrew-yang-bill-de-blasio-20210330-3xu6j5f2srgt5l4nrtazztu23m-story.html)]
+
+- [Just watch the Ziwe interview. I can't even explain.](https://twitter.com/ziwe/status/1396799478695346180)
 
 - He has literally no idea what a bodega is. [[1](https://twitter.com/AndrewYang/status/1350079442488590337)]
 
@@ -64,4 +86,4 @@ There are many qualified women running to be mayor, and because this is our firs
 - [Maya Wiley](https://mayawileyformayor.com/)
 - [Kathryn Garcia](https://www.kgfornyc.com/)
 
-If you live in New York City, make sure you're registered to vote for this upcoming election, and please share this information with other New Yorker's.
+If you live in New York City, make sure you're registered to vote for this upcoming election, and please share this information with other New Yorkers.
