@@ -24,6 +24,8 @@ Please do not vote for the next mayor of our city because their name sounds fami
 
 - He has repeatedly engaged in sexist remarks towards another mayoral candidate that is highly qualified & experienced for the job, suggesting she should work for him instead. [[1](https://twitter.com/KGforNYC/status/1387914522548215810)]
 
+- When asked by a writer at the Atlantic why he was considering someone to be his police commissioner, this was his answer, "all he knew about Demings was that she’s a Black woman who used to be the Orlando police chief and was vetted for vice president". [[1](https://www.theatlantic.com/politics/archive/2021/05/andrew-yang-mayor-political-kardashian/618958/)]
+
 - His signature campaign policy, Universal Basic Income, is actually just a single annual $2,000 stipend to the poorest 500,000 New Yorkers, paid for by cutting social services. [[1](https://twitter.com/alexkotch/status/1387780885764771845)]
 
 - Andrew Yang has repeatedly demonstrated a lack of understanding on core local city issues and debates. [[1](https://www.politico.com/states/new-york/albany/story/2021/05/20/yang-fumbles-on-city-issues-as-race-for-mayor-gets-more-competitive-1383373)]
