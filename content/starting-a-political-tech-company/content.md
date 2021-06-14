@@ -28,7 +28,7 @@ There will certainly still be plenty of campaigns and organizations that pay an 
 
 **If you want to support me on this endeavour, here’s 3 key things I need help with.**
 
-1. **$$$.** I’m aiming to build sustainable revenue so this infrastructure can last from cycle to cycle, but until then I’m on my own (_my bank account did not endorse this decision to quit my job_). If you know an investor that is aligned with the cause and is willing to cut a seed round check, do let me know.
+1. **$$$.** I’m aiming to build sustainable revenue so this infrastructure can last from cycle to cycle, but until then I’m on my own (_my bank account did not endorse this decision to quit my job_). If you know an investor that is aligned with the cause and is willing to cut a seed check & here my pitch, do let me know!
 2. If you work in advocacy or politics as a digital strategist, director, or similar role, and want to keep up to date with the product development please **[join this mailing list](https://hey828893.typeform.com/to/e9u7SbLg)**.
 3. Lastly, if you live in New York City (or find yourself here this summer), **please offer to say hello & catch up!** I’m thrilled to be doing this, but also terrified, starting a company is a lil scary! Friends & time well spent together are a great cure for this.
 
